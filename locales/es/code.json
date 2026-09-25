@@ -12,7 +12,7 @@
   "resend_prompt_expired": "Nada que esperar ahora",
   "back": "Volver a iniciar sesión",
   "self_hosted": "Autoalojado · nada sale de esta máquina",
-  "offline_title": "Este navegador no puede conectarse a tu servidor Tel-Agent",
+  "offline_title": "Este navegador no puede conectarse a tu servidor Opulentus",
   "offline_body": "No hay respuesta de {host}. Tus llamadas no se ven afectadas si la máquina sigue funcionando; este es un problema de red entre tú y ella. Verifica que estás en la red empresarial o conectado a la VPN.",
   "offline_retry": "Reintentar conexión"
 }

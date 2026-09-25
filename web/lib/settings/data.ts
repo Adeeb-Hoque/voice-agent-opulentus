@@ -177,13 +177,13 @@ export const HOST_FIELDS: Field[] = [
     id: "hostname",
     label: "f_hostname",
     help: "f_hostname_help",
-    control: { kind: "input", valueText: "telagent.wagner-partner.local", mono: true },
+    control: { kind: "input", valueText: "opulentus.wagner-partner.local", mono: true },
   },
   {
     id: "publicurl",
     label: "f_public_url",
     help: "f_public_url_help",
-    control: { kind: "input", valueText: "https://telagent.wagner-partner.local", mono: true },
+    control: { kind: "input", valueText: "https://opulentus.wagner-partner.local", mono: true },
   },
   {
     id: "tls",

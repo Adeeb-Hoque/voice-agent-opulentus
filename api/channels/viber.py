@@ -1,7 +1,7 @@
 """The Viber transport — the customer's own bot account, through the public door, §B13.
 
 The customer creates a bot account in their own Viber admin panel and pastes its
-authentication token, and names the sender its messages go out under. Tel-Agent holds
+authentication token, and names the sender its messages go out under. Opulentus holds
 no shared application. Viber delivers events to the channel's webhook - registered with
 Viber when the channel is switched on - and answers go out through the REST bot API.
 

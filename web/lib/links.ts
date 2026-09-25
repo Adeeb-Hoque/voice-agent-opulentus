@@ -11,7 +11,7 @@
  */
 export const EXTERNAL = {
   /** The documentation folder in the repository. */
-  docs: "https://github.com/Dpro-at/Tel-Agent/tree/main/docs",
+  docs: "https://github.com/Adeeb-Hoque/opulentus/tree/main/docs",
   /** Published releases, which is where a release note belongs. */
-  releases: "https://github.com/Dpro-at/Tel-Agent/releases",
+  releases: "https://github.com/Adeeb-Hoque/opulentus/releases",
 } as const;

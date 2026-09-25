@@ -1,7 +1,7 @@
 """The Matrix transport — a bot account on the customer's own homeserver, §B13.
 
 The customer makes an account for the bot on a homeserver they use and pastes its
-access token; Tel-Agent holds no shared application. Inbound is the Client-Server
+access token; Opulentus holds no shared application. Inbound is the Client-Server
 API's **long-poll sync** (`/_matrix/client/v3/sync`), outbound is a room message send.
 Both are calls this installation makes, so it needs no public address: the LAN
 deployment keeps working with a homeserver on the same network or across the internet.
@@ -105,7 +105,7 @@ SETUP = Setup(
             "Bot user ID",
             secret=False,
             help="The full ID of the bot account.",
-            placeholder="@tel-agent:example.com",
+            placeholder="@opulentus:example.com",
         ),
         Field(
             "access_token",

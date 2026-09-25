@@ -73,7 +73,7 @@ def _is_sqlite(url: str) -> bool:
 def resolve_url(url: str) -> str:
     """Anchor a relative SQLite path to the repository, not to the working directory.
 
-    `sqlite+aiosqlite:///./tel-agent.db` means "next to wherever this process happened
+    `sqlite+aiosqlite:///./opulentus.db` means "next to wherever this process happened
     to be started", so `uvicorn` launched from one directory and `alembic upgrade head`
     run from another quietly use two different databases - and the symptom is an
     application whose tables do not exist rather than an error naming the cause.

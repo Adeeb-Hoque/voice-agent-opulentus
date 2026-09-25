@@ -1,4 +1,4 @@
-# CLAUDE.md — working rules for Tel-Agent
+# CLAUDE.md — working rules for Opulentus
 
 Guidance for Claude Code (and any AI assistant) working in this repository.
 Read this before touching anything.
@@ -11,7 +11,7 @@ Read this before touching anything.
 are written in English.** No exceptions, regardless of the language used in
 conversation.
 
-The maintainer communicates in Arabic; the codebase does not. Tel-Agent is a
+The maintainer communicates in Arabic; the codebase does not. Opulentus is a
 public AGPL-3.0 project aimed at an international contributor base, and an
 Arabic codebase would close the door on outside contributions.
 
@@ -127,7 +127,7 @@ Log these on every call, starting with the very first one:
 Every good idea that arrives mid-build goes into `IDEAS.md`, not into the code.
 That file is the mechanism that gets this project finished.
 
-| Tel-Agent owns | Tel-Agent does NOT own |
+| Opulentus owns | Opulentus does NOT own |
 |---|---|
 | Telephony / SIP | General workflow automation |
 | Voice pipeline (STT → LLM → TTS) | Integrations with 400 SaaS apps |
@@ -144,12 +144,12 @@ HTTP tool. n8n and Home Assistant do that job better than we would.
 **The line between a channel and an integration.** A **channel** is where the
 conversation happens — the caller or customer is on the other end of it, speaking or
 typing. An **integration** is a system the agent acts *on* while that conversation
-runs. Tel-Agent owns channels and reaches integrations through the HTTP tool. Without
+runs. Opulentus owns channels and reaches integrations through the HTTP tool. Without
 this line, "add one more connector" has no end, which is the failure Rule 5 exists to
 prevent.
 
 **A channel is an extension — D-032.** The core defines what a channel *is*; each
-actual channel is an extension, official or community. Tel-Agent commits to the
+actual channel is an extension, official or community. Opulentus commits to the
 twenty-four named above (D-044): supported, tested, shipped as official applications.
 Anything beyond them is a community extension carrying no commitment from this project.
 
@@ -181,10 +181,10 @@ Settled. Do not reopen without a concrete reason.
 
 | Decision | Choice |
 |---|---|
-| Name | **Tel-Agent** — hosted edition is "Tel-Agent Cloud" |
-| Domain | `tel-agent.com` |
-| License | AGPL-3.0 + CLA from the first contributor |
-| Copyright holder | Dpro GmbH (Vienna) |
+| Name | **Opulentus** — hosted edition is "Opulentus Cloud" |
+| Domain | not chosen yet |
+| License | AGPL-3.0 |
+| Made by | Opulentus, built by Adeeb |
 | Separate from | Agent-Player and Flowxtra — own repo, no shared code without a written arrangement |
 | Backend | Python (agent + FastAPI) |
 | Frontend | Next.js |
@@ -193,13 +193,13 @@ Settled. Do not reopen without a concrete reason.
 | Packaging | Docker Compose (manual dev run also documented) |
 | Runs as | Locally installed web app on the LAN — not a desktop app, not SaaS-only |
 | First test bed | A number from a SIP provider, pointed at the agent |
-| Number acquisition | Users bring their own number in v1. Reselling numbers belongs to Tel-Agent Cloud and never enters the open edition |
+| Number acquisition | Users bring their own number in v1. Reselling numbers belongs to Opulentus Cloud and never enters the open edition |
 | SIP at Milestone 11 | LiveKit Cloud SIP |
 | Theme | Dark and light, dark designed first |
 | Languages | en / de / ar from day one, RTL supported |
 | Analog lines | Out of scope — users bridge with an ATA; we only ever speak SIP |
 | Workflow automation | Out of scope — webhooks + generic HTTP tool; n8n does the rest |
-| Messaging channels | In scope. **Web chat is the first channel built (D-017).** Tel-Agent commits to twenty-four including the phone (D-044): web chat, SMS, email, WhatsApp, Telegram, Messenger, Instagram, Discord, Slack, Microsoft Teams, Signal, Viber, Google Chat, Mattermost, Matrix, IRC, LINE, WeChat Official Account, WeCom, QQ Bot, DingTalk, Feishu/Lark, iMessage — supported, tested, shipped as official applications. **A channel is an extension, so the list is no longer closed (D-032):** anything beyond them is a community extension carrying no commitment from this project. The customer connects their own app credentials; Tel-Agent never holds a shared platform app |
+| Messaging channels | In scope. **Web chat is the first channel built (D-017).** Opulentus commits to twenty-four including the phone (D-044): web chat, SMS, email, WhatsApp, Telegram, Messenger, Instagram, Discord, Slack, Microsoft Teams, Signal, Viber, Google Chat, Mattermost, Matrix, IRC, LINE, WeChat Official Account, WeCom, QQ Bot, DingTalk, Feishu/Lark, iMessage — supported, tested, shipped as official applications. **A channel is an extension, so the list is no longer closed (D-032):** anything beyond them is a community extension carrying no commitment from this project. The customer connects their own app credentials; Opulentus never holds a shared platform app |
 
 ---
 
@@ -237,7 +237,7 @@ transport later is configuration and not a rewrite.
 a commit message, an issue, a pull request, the README, the specification, the website,
 a release note, or a social post. In any language, in any spelling, not once.
 
-Describe what Tel-Agent *is*. Never describe who it is against.
+Describe what Opulentus *is*. Never describe who it is against.
 
 **This is not reversible.** A name that reaches a public repository stays in the git
 history, in every fork, and in anything that mirrored it. Deleting the file afterwards
@@ -290,7 +290,7 @@ Competitive notes belong in , which is gitignored and never published.
    leaks one customer's transcripts into another customer's screen
 2. A full-text index on `messages.text` in the first migration
 3. `numbers.owner` — customer or platform holds the number. Separates a self-hoster's
-   own number from one resold by Tel-Agent Cloud, and governs who may release or port it
+   own number from one resold by Opulentus Cloud, and governs who may release or port it
 4. `calls.billable_seconds` and `calls.provider_cost_micros` — usage metering from the
    first stored call. Integer micros, never floats
 5. `messages.stt_confidence` and `.language` — per line. Turns "German accuracy" from
@@ -305,8 +305,6 @@ Competitive notes belong in , which is gitignored and never published.
 
 **Git**
 - Commit messages in English, imperative mood
-- The CLA must be in place before the first external PR is merged; after that
-  it becomes practically impossible to obtain retroactively
 
 ---
 
@@ -327,7 +325,6 @@ next one. Nothing else needs editing for the number to move.
 | `docs/SPEC.md` | The complete build specification — single source of truth |
 | `docs/DESIGN_BRIEF.md` | Design starting point; the call detail screen comes first |
 | `IDEAS.md` | Parking lot for everything not in v1 |
-| `CLA.md` | Contributor License Agreement |
 | `.env.example` | Every environment variable, documented |
 | `AGENTS.md` | Short entry for any coding agent; this file remains the full working contract |
 | `GEMINI.md` | Pointer to `AGENTS.md` for Antigravity and Gemini CLI. Holds no rules of its own |

@@ -10,15 +10,6 @@
 
 ---
 
-## Contributor License Agreement — required
-
-Every contribution needs this before it can be merged, including one-line fixes.
-You keep full ownership and copyright of your work. See [CLA.md](../CLA.md).
-
-- [ ] I have read the CLA document and I hereby sign the CLA.
-
----
-
 ## Checklist
 
 - [ ] Everything I wrote — code, comments, commit messages — is in **English**
@@ -42,7 +33,7 @@ Latency impact:
 
 ## Before you open this
 
-Tel-Agent is at **Milestone 0** — a visitor types on a web page, the agent answers,
+Opulentus is at **Milestone 0** — a visitor types on a web page, the agent answers,
 the thread holds, and the reply streams and can be cancelled. Nothing else is being
 built yet. The phone is Milestone 11.
 

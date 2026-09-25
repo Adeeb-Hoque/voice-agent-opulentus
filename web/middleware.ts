@@ -9,7 +9,7 @@ import { DEFAULT_LOCALE, LOCALES } from "@/lib/locales";
  * nothing more. The API refuses unauthenticated requests regardless, so forging the
  * marker buys a redirect to screens whose every request then answers 401.
  */
-const SIGNED_IN_HINT = "telagent_signed_in";
+const SIGNED_IN_HINT = "opulentus_signed_in";
 
 /**
  * Reachable signed out. `login` and its children are where signing in happens;

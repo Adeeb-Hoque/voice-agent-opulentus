@@ -1,6 +1,6 @@
 """Reading conversations, and searching what was said in them.
 
-The transcript archive is one of the five things Rule 5 says Tel-Agent owns, and
+The transcript archive is one of the five things Rule 5 says Opulentus owns, and
 `messages` has carried a full-text index since the very first migration — a GIN index
 over `to_tsvector('simple', text)` on PostgreSQL, an FTS5 virtual table with three
 triggers on SQLite. **Nothing has ever queried either of them.** This module is what

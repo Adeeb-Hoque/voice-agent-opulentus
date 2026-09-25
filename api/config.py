@@ -30,7 +30,7 @@ def _installed_version() -> str:
     reports the fallback, which is honest: nothing knows the version at that point.
     """
     try:
-        return package_version("tel-agent")
+        return package_version("opulentus")
     except PackageNotFoundError:  # pragma: no cover - only on a non-installed tree
         return "0.0.0+unknown"
 
@@ -60,7 +60,7 @@ class Settings(BaseSettings):
     # D-029: SQLAlchemy against both dialects. The default is the file-based option the
     # install wizard offers first — it needs nothing installed, which is what makes a
     # fresh clone runnable.
-    database_url: str = "sqlite+aiosqlite:///./tel-agent.db"
+    database_url: str = "sqlite+aiosqlite:///./opulentus.db"
 
     # B6. The dashboard is served separately in development, so the development origin
     # is allowed by default and nothing else is. A wildcard is rejected outright below:
@@ -69,7 +69,7 @@ class Settings(BaseSettings):
     #
     # `NoDecode` is load-bearing. Without it pydantic-settings tries to JSON-decode a
     # list-typed field straight from the environment, which fails before any validator
-    # runs - and `CORS_ORIGINS=https://telagent.local` is exactly what a `.env` holds.
+    # runs - and `CORS_ORIGINS=https://opulentus.local` is exactly what a `.env` holds.
     cors_origins: Annotated[list[str], NoDecode] = Field(
         default_factory=lambda: ["http://localhost:38471"]
     )

@@ -155,7 +155,7 @@ async def test_a_token_for_one_path_does_not_open_the_other(stage) -> None:
 
     wrong = await machine.post("/hooks/call", headers={"Authorization": f"Bearer {mcp}"})
     unknown = await machine.post(
-        "/hooks/call", headers={"Authorization": "Bearer telagent_hooks_nothing"}
+        "/hooks/call", headers={"Authorization": "Bearer opulentus_hooks_nothing"}
     )
     assert wrong.status_code == unknown.status_code == 401
     assert wrong.json()["error"]["message"] == unknown.json()["error"]["message"]
@@ -273,7 +273,7 @@ async def test_guessing_is_limited_before_anything_is_proved(
         machine_tokens, "PER_CLIENT", Limit(count=2, window=datetime_.timedelta(minutes=1))
     )
 
-    header = {"Authorization": "Bearer telagent_hooks_guess"}
+    header = {"Authorization": "Bearer opulentus_hooks_guess"}
     assert (await machine.post("/hooks/call", headers=header)).status_code == 401
     assert (await machine.post("/hooks/call", headers=header)).status_code == 401
     assert (await machine.post("/hooks/call", headers=header)).status_code == 429

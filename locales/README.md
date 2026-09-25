@@ -106,7 +106,7 @@ pull request.
   runtime; a translated placeholder is a bug that only shows up on that language.
 - **Latin-script data is never translated** — phone numbers, API keys, timestamps, logs,
   code. Only interface text.
-- **Product names stay** — Tel-Agent, WhatsApp, Telegram, SMS. If a key is identical to
+- **Product names stay** — Opulentus, WhatsApp, Telegram, SMS. If a key is identical to
   English on purpose, that is fine; the script only asks you to check, it does not
   demand a change.
 - **Keep it short.** These are buttons and labels. A translation twice the length of the

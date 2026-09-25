@@ -1,7 +1,7 @@
 """The Mattermost transport — a bot account on the WebSocket gateway, §B13.
 
 The customer makes a bot account in their own Mattermost installation and pastes its
-access token; Tel-Agent never holds a shared platform application. Inbound is the
+access token; Opulentus never holds a shared platform application. Inbound is the
 server's **WebSocket event stream** (`/api/v4/websocket`), and outbound is the
 REST API (`/api/v4/posts`). The gateway needs no public address at all, which keeps
 the self-hosted LAN deployment story intact: this installation dials out.

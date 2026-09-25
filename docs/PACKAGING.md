@@ -1,6 +1,6 @@
 # Packaging and updates
 
-Tel-Agent installs as a local web application: the installer starts the local service
+Opulentus installs as a local web application: the installer starts the local service
 and opens the dashboard in the browser at `http://localhost:38471`. It is not a separate desktop application.
 
 ## Supported delivery paths
@@ -17,14 +17,14 @@ and opens the dashboard in the browser at `http://localhost:38471`. It is not a 
 ## Windows upgrades
 
 The Windows installer is self-contained: it carries the Python and Node runtimes, the
-API, and the dashboard. It installs two Windows services - the API (`TelAgent`, port
-38472) and the dashboard (`TelAgentWeb`, port 38471, dependent on the API), both
+API, and the dashboard. It installs two Windows services - the API (`Opulentus`, port
+38472) and the dashboard (`OpulentusWeb`, port 38471, dependent on the API), both
 loopback only - and opens the browser at `http://localhost:38471` once the dashboard
 answers. The wizard shows nothing but a progress bar: every setup screen lives in the
 product at `/install`, so Windows, macOS, Linux and Docker users see the same screens
 in the same five languages.
 
-The installer creates the SQLite database under `ProgramData\\Tel-Agent\\data` and
+The installer creates the SQLite database under `ProgramData\\Opulentus\\data` and
 creates the encryption key only on the first run. An upgrade stops both services, replaces
 the application files, then starts them again. It does not replace `.env`, the database,
 or the encryption key, so an update is not a new installation.

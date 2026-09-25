@@ -15,7 +15,7 @@
   "no_mail_body": "No hay ningún servidor de correo configurado, así que no hay adónde enviar un código. Un administrador restablece la contraseña en la propia máquina:",
   "no_mail_hint": "El comando muestra una contraseña nueva una sola vez. No se guarda y no se puede volver a mostrar.",
   "no_mail_settings": "Configura un servidor de correo en Configuración",
-  "offline_title": "Este navegador no puede conectarse a tu servidor Tel-Agent",
+  "offline_title": "Este navegador no puede conectarse a tu servidor Opulentus",
   "offline_body": "No hay respuesta de {host}. Tus llamadas no se ven afectadas si la máquina sigue funcionando; este es un problema de red entre tú y ella. Verifica que estás en la red empresarial o conectado a la VPN.",
   "offline_retry": "Reintentar conexión"
 }

@@ -62,7 +62,7 @@ class FakeSlack:
                 json={
                     "ok": True,
                     "team": "Wagner & Partner",
-                    "user": "telagent",
+                    "user": "opulentus",
                     "user_id": BOT_USER_ID,
                 },
             )
@@ -290,7 +290,7 @@ async def test_the_connection_test_names_the_workspace_and_the_bot(stage) -> Non
     assert answer.json() == {
         "ok": True,
         "team_name": "Wagner & Partner",
-        "bot_name": "telagent",
+        "bot_name": "opulentus",
     }
     read = (await clients["mohamed"].get("/api/channels/slack")).json()
     assert read["team_name"] == "Wagner & Partner"

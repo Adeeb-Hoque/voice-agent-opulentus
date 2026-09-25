@@ -35,7 +35,7 @@ async def test_openapi_schema_renders(client: AsyncClient) -> None:
 
     assert response.status_code == 200
     schema = response.json()
-    assert schema["info"]["title"] == "Tel-Agent"
+    assert schema["info"]["title"] == "Opulentus"
     assert schema["info"]["license"]["name"] == "AGPL-3.0-or-later"
     assert "/health" in schema["paths"]
 

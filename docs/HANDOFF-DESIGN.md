@@ -1,4 +1,4 @@
-# Design Handoff — Tel-Agent, Call Detail Screen
+# Design Handoff — Opulentus, Call Detail Screen
 
 **This document is self-contained.** Everything needed to do the work is below; no
 access to the repository or any other file is required.
@@ -7,7 +7,7 @@ access to the repository or any other file is required.
 
 ## The request
 
-Design **one screen**: the **Call detail** screen of Tel-Agent, in the **dark theme**.
+Design **one screen**: the **Call detail** screen of Opulentus, in the **dark theme**.
 
 **Deliver it as a single self-contained HTML file** — inline CSS, no external
 resources, no build step. System fonts or a web-safe geometric sans is fine. It should
@@ -30,10 +30,10 @@ Do not deliver a component library, a style tile, or a moodboard. One finished s
 
 ## What the product is
 
-Tel-Agent is a self-hosted, open-source gateway that sits between a phone line and an
+Opulentus is a self-hosted, open-source gateway that sits between a phone line and an
 AI agent.
 
-A phone call arrives. Tel-Agent checks the caller against routing rules and either
+A phone call arrives. Opulentus checks the caller against routing rules and either
 passes it to a human, blocks it, or hands it to an AI agent. The agent talks with the
 caller in real time, can perform actions (transfer the call, take a message, check a
 calendar), and every call is recorded, transcribed, and searchable.

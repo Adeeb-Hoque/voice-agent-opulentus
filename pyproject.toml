@@ -1,11 +1,11 @@
 [project]
-name = "tel-agent"
+name = "opulentus"
 version = "0.1.0"
 description = "An AI agent that answers the phone and every messaging channel a customer reaches you on."
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "AGPL-3.0-or-later" }
-authors = [{ name = "Dpro GmbH" }]
+authors = [{ name = "Opulentus" }, { name = "Adeeb" }]
 
 dependencies = [
     # Upper bounds because FastAPI is pre-1.0: the minor position is the breaking one.
@@ -51,7 +51,7 @@ dependencies = [
 [project.scripts]
 # The documented way to start the API. It exists so that `bind_host` is applied rather
 # than suggested - see `api/__main__.py`.
-tel-agent = "api.__main__:main"
+opulentus = "api.__main__:main"
 
 [project.optional-dependencies]
 # The phone's media transport (Milestone 11). Optional because the core - every text
@@ -80,8 +80,8 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://tel-agent.com"
-Source = "https://github.com/Dpro-at/Tel-Agent"
+Homepage = "https://github.com/Adeeb-Hoque/opulentus"
+Source = "https://github.com/Adeeb-Hoque/opulentus"
 
 [build-system]
 requires = ["setuptools>=68"]

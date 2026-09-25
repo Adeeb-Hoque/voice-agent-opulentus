@@ -1,9 +1,9 @@
 ---
-description: Core Tel-Agent rules for every Cursor session
+description: Core Opulentus rules for every Cursor session
 alwaysApply: true
 ---
 
-# Tel-Agent — always
+# Opulentus — always
 
 - Read `CLAUDE.md` and `AGENTS.md` before substantive edits. Spec wins on conflict: `docs/SPEC.md`.
 - **English only** in code, comments, commits, PRs, issues.

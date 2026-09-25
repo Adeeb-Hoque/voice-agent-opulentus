@@ -12,7 +12,7 @@
   "verdict_security_body": "An unauthenticated request could read call transcripts if the interface is exposed to the internet. If yours is only on the business network you are not at risk today, but install it this week regardless.",
   "verdict_security_meta": "released 2 days ago",
   "verdict_current_title": "You are on the current release",
-  "verdict_current_body": "Nothing to do. Tel-Agent checks nightly and emails you only when something is worth installing.",
+  "verdict_current_body": "Nothing to do. Opulentus checks nightly and emails you only when something is worth installing.",
   "verdict_current_meta": "checked 1 h ago",
   "running_title": "Updating to {version}",
   "running_step": "step 3 of 6",

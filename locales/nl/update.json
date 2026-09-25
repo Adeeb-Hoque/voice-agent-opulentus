@@ -12,7 +12,7 @@
   "verdict_security_body": "Een niet-geauthenticeerd verzoek kon gesprekstranscripts lezen als de interface op internet bereikbaar is. Als die van jou alleen op het bedrijfsnetwerk staat, loop je vandaag geen risico, maar installeer hem deze week toch.",
   "verdict_security_meta": "2 dagen geleden uitgebracht",
   "verdict_current_title": "Je zit op de huidige release",
-  "verdict_current_body": "Niets te doen. Tel-Agent controleert elke nacht en mailt je alleen wanneer iets de installatie waard is.",
+  "verdict_current_body": "Niets te doen. Opulentus controleert elke nacht en mailt je alleen wanneer iets de installatie waard is.",
   "verdict_current_meta": "1 u geleden gecontroleerd",
   "running_title": "Updaten naar {version}",
   "running_step": "stap 3 van 6",

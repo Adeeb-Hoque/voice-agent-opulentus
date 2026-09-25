@@ -8,7 +8,7 @@
  * a stale or forged value buys a 403, not access.
  */
 
-const KEY = "telagent-workspace";
+const KEY = "opulentus-workspace";
 
 export function activeWorkspaceId(): number | null {
   try {

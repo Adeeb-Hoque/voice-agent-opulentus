@@ -187,16 +187,16 @@ async def test_gate_refusals_carry_cors_headers(signed_up: AsyncClient) -> None:
     ("origin", "host", "allowed"),
     [
         # The reverse-proxy case: browser says https, TLS terminated in front.
-        ("https://telagent.local", "telagent.local", True),
+        ("https://opulentus.local", "opulentus.local", True),
         # Same host, explicit port on both sides.
         ("http://192.168.1.10:8000", "192.168.1.10:8000", True),
         # Port differs: a different origin in every way that matters.
-        ("http://telagent.local:9999", "telagent.local", False),
+        ("http://opulentus.local:9999", "opulentus.local", False),
         # Case-insensitive, as host names are.
-        ("https://TelAgent.LOCAL", "telagent.local", True),
-        ("https://evil.example", "telagent.local", False),
-        ("null", "telagent.local", False),
-        ("not a url at all", "telagent.local", False),
+        ("https://Opulentus.LOCAL", "opulentus.local", True),
+        ("https://evil.example", "opulentus.local", False),
+        ("null", "opulentus.local", False),
+        ("not a url at all", "opulentus.local", False),
     ],
 )
 def test_same_host_comparison(origin: str, host: str, allowed: bool) -> None:

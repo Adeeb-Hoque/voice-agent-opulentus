@@ -62,7 +62,7 @@ async def _hook(
 ) -> Webhook:
     row = Webhook(
         workspace_id=workspace_id,
-        url="https://wagner-partner.test/hooks/tel-agent",
+        url="https://wagner-partner.test/hooks/opulentus",
         events=events,
         secret=SECRET,
         enabled=enabled,
@@ -211,16 +211,16 @@ async def test_the_signature_covers_the_bytes_that_were_delivered(
 
     body = seen["body"]
     headers = seen["headers"]
-    timestamp = int(headers["x-tel-agent-timestamp"])
+    timestamp = int(headers["x-opulentus-timestamp"])
 
     # Verified exactly as a receiver would, against the bytes that arrived.
     expected = (
         "sha256="
         + hmac.new(SECRET.encode(), f"{timestamp}.".encode() + body, hashlib.sha256).hexdigest()
     )
-    assert headers["x-tel-agent-signature"] == expected
-    assert headers["x-tel-agent-event"] == "message.received"
-    assert headers["x-tel-agent-delivery"] == "7"
+    assert headers["x-opulentus-signature"] == expected
+    assert headers["x-opulentus-event"] == "message.received"
+    assert headers["x-opulentus-delivery"] == "7"
 
 
 async def test_a_refusal_is_raised_so_the_runner_retries(

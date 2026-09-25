@@ -23,7 +23,7 @@
   "target_s3_note": "Encrypted with a key held only here. Lose the key and the provider cannot help you — write it down somewhere physical.",
   "target_usb": "A USB disk",
   "target_usb_body": "Plugged into this machine. Works, but only if somebody remembers to swap and take one home.",
-  "target_usb_note": "The most commonly forgotten option. Tel-Agent warns you here if no disk has been seen for a week.",
+  "target_usb_note": "The most commonly forgotten option. Opulentus warns you here if no disk has been seen for a week.",
   "target_none": "Nowhere",
   "target_none_body": "No backup at all. Everything lives on one disk in one machine.",
   "target_none_note": "One failed disk and every call, transcript and contact is gone, with no copy anywhere.",

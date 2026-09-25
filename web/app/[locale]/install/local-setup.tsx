@@ -48,7 +48,7 @@ const CATALOGUE: { name: string; gb: number }[] = [
 ];
 
 /** Where a free runtime comes from. Loopback runtimes are a tool the operator installs,
- *  not a provider Tel-Agent talks to on their behalf. */
+ *  not a provider Opulentus talks to on their behalf. */
 const RUNTIME_DOWNLOAD_URL = "https://ollama.com/download";
 
 type Scan =

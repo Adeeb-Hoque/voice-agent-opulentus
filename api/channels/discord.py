@@ -1,7 +1,7 @@
 """The Discord transport — a bot on the gateway, §B13.
 
 The customer makes a bot in their own Discord developer portal and pastes its token;
-Tel-Agent never holds a shared application. Inbound is the **gateway WebSocket**,
+Opulentus never holds a shared application. Inbound is the **gateway WebSocket**,
 because Discord offers nothing else for conversational messages — the REST API can
 send but not listen, and the interactions webhook carries slash commands and forms,
 not a customer typing. The gateway needs no public address at all, which keeps the
@@ -12,7 +12,7 @@ answers — a DM to the business's bot is a customer walking up to the desk. In 
 server channel it answers only when mentioned, because a bot that replies to every
 line of a busy channel is noise the server will kick. The mention is stripped before
 the text enters the record; the customer said "book me Tuesday", not
-"@Tel-Agent book me Tuesday".
+"@Opulentus book me Tuesday".
 
 **Bots are never customers.** Any message whose author is a bot — this one or any
 other — is skipped whole. Two bots answering each other is the email auto-reply loop
@@ -431,8 +431,8 @@ async def _run_gateway(sessionmaker: async_sessionmaker, channel_id: int, token:
                         "intents": INTENTS,
                         "properties": {
                             "os": "linux",
-                            "browser": "telagent",
-                            "device": "telagent",
+                            "browser": "opulentus",
+                            "device": "opulentus",
                         },
                     },
                 }

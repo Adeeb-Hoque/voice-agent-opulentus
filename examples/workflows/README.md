@@ -1,15 +1,15 @@
 # examples/workflows/ — importable n8n examples
 
-Ready-to-import n8n JSON workflows showing how to reach Tel-Agent from an automation
+Ready-to-import n8n JSON workflows showing how to reach Opulentus from an automation
 platform.
 
 ## Why these exist
 
-**Workflow automation is explicitly out of scope for Tel-Agent.** We do not integrate
+**Workflow automation is explicitly out of scope for Opulentus.** We do not integrate
 with 400 SaaS applications, and we are not going to try — n8n and Home Assistant do
 that job better than we would.
 
-Instead Tel-Agent exposes two doors, and these examples show how to walk through them:
+Instead Opulentus exposes two doors, and these examples show how to walk through them:
 
 - **Webhooks out**, each signed with a shared secret:
   `call.started` · `call.ended` · `intent.detected` · `message.taken` ·
@@ -30,7 +30,7 @@ mid-conversation.
 
 ## Note
 
-An **n8n community node for Tel-Agent** is one of the strongest distribution channels
+An **n8n community node for Opulentus** is one of the strongest distribution channels
 available to this project — a large community actively looks for new nodes. These
 examples are the groundwork for it, not a substitute.
 

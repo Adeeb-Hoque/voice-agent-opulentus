@@ -121,7 +121,7 @@ export type Me = {
 // middleware route a signed-out visitor to the sign-in screen without a round trip.
 // It is a routing hint, not security: the API refuses regardless (D14's own words),
 // and forging it buys a redirect to screens whose every request then gets a 401.
-export const SIGNED_IN_HINT = "telagent_signed_in";
+export const SIGNED_IN_HINT = "opulentus_signed_in";
 
 function setSignedInHint(on: boolean): void {
   if (typeof document === "undefined") return;
@@ -272,7 +272,7 @@ export function attemptsLeft(error: ApiError): number | null {
 // URL: an account name in a URL lands in browser history, server logs and the
 // Referer header, none of which need to know it.
 
-const RESET_USERNAME_KEY = "telagent-reset-username";
+const RESET_USERNAME_KEY = "opulentus-reset-username";
 
 export function rememberResetUsername(username: string): void {
   try {
@@ -914,7 +914,7 @@ export type PhoneNumber = {
   e164: string;
   provider: string;
   /** §B5 decision 3 — who holds the number. Everything added from this dashboard is
-   *  `customer`; a `platform` number belongs to Tel-Agent Cloud and cannot be
+   *  `customer`; a `platform` number belongs to Opulentus Cloud and cannot be
    *  released here. */
   owner: "customer" | "platform";
   status: "active" | "disabled";

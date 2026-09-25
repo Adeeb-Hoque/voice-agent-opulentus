@@ -23,7 +23,7 @@
   "target_s3_note": "Verschlüsselt mit einem Schlüssel, der nur hier liegt. Verlieren Sie ihn, kann Ihnen der Anbieter nicht helfen — schreiben Sie ihn irgendwo auf Papier.",
   "target_usb": "Eine USB-Festplatte",
   "target_usb_body": "An dieser Maschine angesteckt. Funktioniert, aber nur, wenn jemand daran denkt, sie zu tauschen und eine mit nach Hause zu nehmen.",
-  "target_usb_note": "Die am häufigsten vergessene Möglichkeit. Tel-Agent warnt Sie hier, wenn eine Woche lang keine Platte gesehen wurde.",
+  "target_usb_note": "Die am häufigsten vergessene Möglichkeit. Opulentus warnt Sie hier, wenn eine Woche lang keine Platte gesehen wurde.",
   "target_none": "Nirgendwohin",
   "target_none_body": "Überhaupt keine Sicherung. Alles liegt auf einer Festplatte in einer Maschine.",
   "target_none_note": "Eine ausgefallene Festplatte, und jeder Anruf, jedes Transkript und jeder Kontakt ist weg, ohne Kopie irgendwo.",

@@ -23,7 +23,7 @@
   "target_s3_note": "Versleuteld met een sleutel die alleen hier ligt. Raak die kwijt en de provider kan je niet helpen — schrijf hem ergens op papier.",
   "target_usb": "Een USB-schijf",
   "target_usb_body": "Aangesloten op deze machine. Werkt, maar alleen als iemand eraan denkt om te wisselen en er een mee naar huis te nemen.",
-  "target_usb_note": "De meest vergeten optie. Tel-Agent waarschuwt je hier als er een week geen schijf is gezien.",
+  "target_usb_note": "De meest vergeten optie. Opulentus waarschuwt je hier als er een week geen schijf is gezien.",
   "target_none": "Nergens",
   "target_none_body": "Helemaal geen back-up. Alles staat op één schijf in één machine.",
   "target_none_note": "Eén kapotte schijf en elke oproep, elk transcript en elk contact is weg, zonder kopie ergens.",

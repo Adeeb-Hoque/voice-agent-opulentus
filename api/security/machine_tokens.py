@@ -48,7 +48,7 @@ MACHINE_EXACT: dict[str, str] = {"/mcp": "mcp"}
 # configuration file, and secret scanners can be taught the shape. What the token is
 # actually good for is the `scope` column on its row.
 _TOKEN_BYTES = 32
-_PREFIX = "telagent"
+_PREFIX = "opulentus"
 
 # A provider posting call events, and a model calling tools. Both are machines, so the
 # ceilings are far above any real integration and far below the rate at which a loop

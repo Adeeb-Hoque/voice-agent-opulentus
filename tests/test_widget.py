@@ -73,7 +73,7 @@ async def test_the_script_needs_no_session_and_names_no_channel(stage) -> None:
 
     body = answer.text
     # The same file for every channel, which is why it can be cached.
-    assert "data-tel-agent" in body
+    assert "data-opulentus" in body
     assert "iframe" in body
     assert "max-age" in answer.headers.get("cache-control", "")
 

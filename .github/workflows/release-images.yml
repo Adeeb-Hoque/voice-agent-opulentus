@@ -8,7 +8,7 @@
 # a release.
 #
 # No secrets beyond the workflow's own GITHUB_TOKEN. Note for the first publish:
-# GHCR creates new packages private - making `tel-agent-api` and `tel-agent-web`
+# GHCR creates new packages private - making `opulentus-api` and `opulentus-web`
 # public is a one-time click in the package settings.
 
 name: Release images
@@ -28,9 +28,9 @@ jobs:
     strategy:
       matrix:
         include:
-          - image: tel-agent-api
+          - image: opulentus-api
             dockerfile: docker/api.Dockerfile
-          - image: tel-agent-web
+          - image: opulentus-web
             dockerfile: docker/web.Dockerfile
     steps:
       - uses: actions/checkout@v4
@@ -51,7 +51,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           # Lowercase is a registry requirement, and the org name carries a capital.
-          images: ghcr.io/dpro-at/${{ matrix.image }}
+          images: ghcr.io/adeeb-hoque/${{ matrix.image }}
           tags: |
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}

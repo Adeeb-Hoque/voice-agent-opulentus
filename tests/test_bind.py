@@ -35,7 +35,7 @@ def test_the_addresses_that_stay_on_this_machine(host: str) -> None:
         "0.0.0.0",  # noqa: S104 - the string being tested, not a bind
         "::",
         "192.168.1.10",
-        "telagent.wagner-partner.local",
+        "opulentus.wagner-partner.local",
         "",
     ],
 )

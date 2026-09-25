@@ -96,7 +96,7 @@ def _key_warning(manifest: dict) -> str | None:
 def _schema_warning(manifest: dict) -> str | None:
     """Refuse a restore from a schema this installation does not know.
 
-    An archive from a *newer* Tel-Agent carries columns this code has never heard of.
+    An archive from a *newer* Opulentus carries columns this code has never heard of.
     Loading it would either fail halfway — leaving a half-emptied database — or
     silently drop them. Both are worse than refusing.
     """
@@ -118,7 +118,7 @@ def _schema_warning(manifest: dict) -> str | None:
     if archived not in known:
         return (
             f"This archive was taken at schema revision {archived}, which this\n"
-            "installation does not have. It is from a NEWER version of Tel-Agent.\n"
+            "installation does not have. It is from a NEWER version of Opulentus.\n"
             "Upgrade first, then restore."
         )
     return None
@@ -267,7 +267,7 @@ def main() -> int:
         RESTORE_REQUEST.unlink()
 
     print(f"\nRestored from {path.name} at {dt.datetime.now(dt.UTC).isoformat()}.")
-    print("Start Tel-Agent again.")
+    print("Start Opulentus again.")
     return 0
 
 

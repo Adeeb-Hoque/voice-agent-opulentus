@@ -14,23 +14,23 @@ case "$ARCH" in
   *) echo "unsupported architecture: $ARCH" >&2; exit 1 ;;
 esac
 
-APP="$STAGE/root/Library/Tel-Agent"
+APP="$STAGE/root/Library/Opulentus"
 mkdir -p "$APP" "$STAGE/scripts"
-curl -fsSL -o /tmp/tel-agent-python.tar.gz "https://github.com/astral-sh/python-build-standalone/releases/download/${PYTHON_BUILD}/cpython-${PYTHON_VERSION}+${PYTHON_BUILD}-${PY_ARCH}-install_only_stripped.tar.gz"
-tar -xzf /tmp/tel-agent-python.tar.gz -C "$APP"
-curl -fsSL -o /tmp/tel-agent-node.tar.gz "https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-darwin-${NODE_ARCH}.tar.gz"
+curl -fsSL -o /tmp/opulentus-python.tar.gz "https://github.com/astral-sh/python-build-standalone/releases/download/${PYTHON_BUILD}/cpython-${PYTHON_VERSION}+${PYTHON_BUILD}-${PY_ARCH}-install_only_stripped.tar.gz"
+tar -xzf /tmp/opulentus-python.tar.gz -C "$APP"
+curl -fsSL -o /tmp/opulentus-node.tar.gz "https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-darwin-${NODE_ARCH}.tar.gz"
 mkdir -p "$APP/node"
-tar -xzf /tmp/tel-agent-node.tar.gz -C "$APP/node" --strip-components=1
+tar -xzf /tmp/opulentus-node.tar.gz -C "$APP/node" --strip-components=1
 
 "$APP/python/bin/python3" -m ensurepip --upgrade >/dev/null 2>&1 || true
 "$APP/python/bin/python3" -m pip install --no-cache-dir .
 cp -R api agent locales alembic "$APP/"
 cp alembic.ini "$APP/"
-cp packaging/macos/tel-agent.env "$APP/.env.template"
+cp packaging/macos/opulentus.env "$APP/.env.template"
 cp packaging/macos/api-start.sh "$APP/"
 mkdir -p "$STAGE/root/Library/LaunchDaemons"
-cp packaging/macos/com.dpro.tel-agent.api.plist "$STAGE/root/Library/LaunchDaemons/"
-cp packaging/macos/com.dpro.tel-agent.web.plist "$STAGE/root/Library/LaunchDaemons/"
+cp packaging/macos/com.opulentus.api.plist "$STAGE/root/Library/LaunchDaemons/"
+cp packaging/macos/com.opulentus.web.plist "$STAGE/root/Library/LaunchDaemons/"
 mkdir -p "$APP/web-app/web/.next/static"
 cp -R web/.next/standalone/. "$APP/web-app/"
 cp -R web/.next/static/. "$APP/web-app/web/.next/static/"

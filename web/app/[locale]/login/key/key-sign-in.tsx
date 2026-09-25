@@ -21,7 +21,7 @@ import { INSTALLATION } from "../installation";
 import type { KeyDictionary } from "./page";
 
 /** Machine input, typed verbatim on the caller's own machine. Never translated. */
-const SIGN_COMMAND = "ssh-keygen -Y sign -f ~/.ssh/id_ed25519 -n tel-agent";
+const SIGN_COMMAND = "ssh-keygen -Y sign -f ~/.ssh/id_ed25519 -n opulentus";
 
 /**
  * Signing in with a key instead of a password.

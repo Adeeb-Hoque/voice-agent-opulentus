@@ -54,7 +54,7 @@ async def stage(migrated: AsyncSession, settings: Settings, database_url: str):
         "ours": Webhook(
             workspace_id=mine.id,
             name="Practice software",
-            url="https://practice.wagner-partner.at/hooks/telagent",
+            url="https://practice.wagner-partner.at/hooks/opulentus",
             events=["conversation.ended"],
             secret=OURS_SECRET,
         ),
@@ -148,7 +148,9 @@ async def test_the_secret_is_encrypted_at_rest(stage) -> None:
 async def test_list_is_scoped_and_the_neighbour_is_absent(stage) -> None:
     clients, ids, _ = stage
     mine = (await clients["mohamed"].get("/api/webhooks")).json()
-    assert [row["url"] for row in mine] == ["https://practice.wagner-partner.at/hooks/telagent"]
+    assert [row["url"] for row in mine] == [
+        "https://practice.wagner-partner.at/hooks/opulentus"
+    ]
 
     for verb, kwargs in (("patch", {"json": {"enabled": False}}), ("delete", {})):
         answer = await getattr(clients["mohamed"], verb)(

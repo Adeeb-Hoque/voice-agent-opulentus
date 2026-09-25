@@ -64,7 +64,7 @@ const WAITING: Waiting[] = [
   },
   {
     id: "c",
-    name: "Hoffmann GmbH",
+    name: "Adeeb Hoque",
     number: "+43 1 402 7781",
     note: "note_twice",
     on: "+43 1 987 6543",

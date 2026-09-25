@@ -1,11 +1,11 @@
 ---
 name: channel-extension
-description: Use when adding a new messaging channel to Tel-Agent or changing an existing one — a transport under api/channels/, its official extension manifest, its settings card, tests, health and docs. Covers the file checklist, the two inbound shapes (dial-out and the public door), the credential and signature rules that are not negotiable, the declarative setup descriptor the generic card draws from, and the test shape every channel ships with.
+description: Use when adding a new messaging channel to Opulentus or changing an existing one — a transport under api/channels/, its official extension manifest, its settings card, tests, health and docs. Covers the file checklist, the two inbound shapes (dial-out and the public door), the credential and signature rules that are not negotiable, the declarative setup descriptor the generic card draws from, and the test shape every channel ships with.
 ---
 
 # Building a channel extension
 
-You are adding a messaging channel to Tel-Agent. A channel is a route a **customer**
+You are adding a messaging channel to Opulentus. A channel is a route a **customer**
 uses to reach a business — someone is typing on the other end. If nobody outside the
 business is on the other end, it is an integration, not a channel, and it is reached
 through the HTTP tool instead (Rule 5 in `CLAUDE.md`). Do not build it here.
@@ -200,9 +200,9 @@ Clearing the last required secret switches the channel off. Storing requires the
 installation's encryption key (409 `encryption_key_missing` without it). Never log a
 credential, never return one, never put one in a URL. Every write is audited.
 
-**The customer's own application.** Tel-Agent holds no shared platform app. Every
+**The customer's own application.** Opulentus holds no shared platform app. Every
 credential comes from the customer's own developer account. If a platform only works
-through an application the vendor owns, it cannot be a Tel-Agent channel.
+through an application the vendor owns, it cannot be an Opulentus channel.
 
 **The door — for every channel that receives webhooks.**
 1. The address is a long random path (`secrets.token_urlsafe(24)`), unique per channel,

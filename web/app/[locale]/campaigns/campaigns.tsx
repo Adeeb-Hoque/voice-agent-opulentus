@@ -854,7 +854,7 @@ function ConsentLogFull({ locale, t }: { locale: Locale; t: CampaignsDictionary 
           className="border-od-border mono ltr-data text-od-faint mt-[18px] flex flex-wrap gap-4 border-t pt-[14px] text-[11.5px]"
         >
           <span>consent-log/enospc</span>
-          <span>/var/telagent/consent</span>
+          <span>/var/opulentus/consent</span>
           <span>2026-08-20 09:41:07</span>
         </div>
       </div>

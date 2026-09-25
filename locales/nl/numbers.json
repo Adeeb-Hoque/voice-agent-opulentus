@@ -21,7 +21,7 @@
   "release_confirm": "Dit nummer vrijgeven",
   "release_cancel": "Behouden",
   "empty_title": "Nog geen nummers",
-  "empty_body": "Voeg het nummer toe dat je bij je provider hebt gekocht en het verschijnt hier. Het contract blijft van jou — Tel-Agent houdt alleen het record bij.",
+  "empty_body": "Voeg het nummer toe dat je bij je provider hebt gekocht en het verschijnt hier. Het contract blijft van jou — Opulentus houdt alleen het record bij.",
   "error_invalid_e164": "Een nummer schrijf je als +, landcode, cijfers — zoals +43 720 123456.",
   "error_number_taken": "Deze werkruimte heeft dat nummer al.",
   "error_platform_number": "Dit nummer wordt door het platform gehouden en kan hier niet worden vrijgegeven.",

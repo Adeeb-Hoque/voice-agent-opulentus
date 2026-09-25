@@ -12,6 +12,6 @@ alwaysApply: false
 - Translate **values only**. Never change keys.
 - Leave `{placeholders}` unchanged (`{count}`, `{name}`, …).
 - Only translate languages you speak. Unreviewed machine translation is worse than missing.
-- Product names stay as-is (Tel-Agent, WhatsApp, SMS, …).
+- Product names stay as-is (Opulentus, WhatsApp, SMS, …).
 - Partial community locales are fine; only `en` / `de` / `ar` block releases.
 - First-time contributors: follow `docs/ONBOARDING.md`.

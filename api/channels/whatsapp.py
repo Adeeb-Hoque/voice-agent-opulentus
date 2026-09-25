@@ -2,7 +2,7 @@
 
 The customer connects their own Meta application: a permanent access token, the phone
 number id it sends as, and the app secret that signs every webhook Meta delivers.
-Tel-Agent never holds a shared platform application — one shared app would put every
+Opulentus never holds a shared platform application — one shared app would put every
 installation behind one rate limit and make one policy violation everybody's outage.
 
 **Webhooks, because the platform offers nothing else.** Telegram and email could poll

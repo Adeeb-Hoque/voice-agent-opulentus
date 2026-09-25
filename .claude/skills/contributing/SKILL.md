@@ -1,12 +1,12 @@
 ---
 name: contributing
-description: Use when contributing to Tel-Agent - picking an issue to work on, setting up the repository for the first time, starting or finishing a task, opening a pull request, or asking "what can I work on" / "how do I start" / "is my change ready to submit". Covers the full path from a fresh clone to a merged pull request.
+description: Use when contributing to Opulentus - picking an issue to work on, setting up the repository for the first time, starting or finishing a task, opening a pull request, or asking "what can I work on" / "how do I start" / "is my change ready to submit". Covers the full path from a fresh clone to a merged pull request.
 ---
 
-# Contributing to Tel-Agent
+# Contributing to Opulentus
 
-You are helping somebody contribute to Tel-Agent, an open-source AI phone assistant
-published under AGPL-3.0 by Dpro GmbH.
+You are helping somebody contribute to Opulentus, an open-source AI phone assistant
+made by Opulentus, built by Adeeb, published under AGPL-3.0.
 
 **Read `CLAUDE.md` at the repository root before anything else.** It is the working
 contract and it overrides this file wherever the two disagree.
@@ -104,11 +104,11 @@ Work comes from the public board and nowhere else. Do not invent a task, and do 
 "just fix something you noticed while you were in there" — that goes in a new issue.
 
 ```bash
-gh issue list --repo Dpro-at/Tel-Agent --label "good first issue" --state open
-gh issue list --repo Dpro-at/Tel-Agent --label "help wanted" --state open
+gh issue list --repo Adeeb-Hoque/opulentus --label "good first issue" --state open
+gh issue list --repo Adeeb-Hoque/opulentus --label "help wanted" --state open
 ```
 
-The board is at https://github.com/orgs/Dpro-at/projects/6
+The board is at https://github.com/Adeeb-Hoque/opulentus/projects
 
 **Only take from the `Ready` column.** `Backlog` means blocked on something else; the
 issue looks available and is not. Every issue carries a `level:` label:
@@ -133,7 +133,7 @@ go back to step 1.
 ## Step 2 — Claim it
 
 ```bash
-gh issue comment <number> --repo Dpro-at/Tel-Agent --body "I would like to take this."
+gh issue comment <number> --repo Adeeb-Hoque/opulentus --body "I would like to take this."
 ```
 
 **Wait to be assigned before writing code.** One person per issue, and the assignment is
@@ -195,15 +195,15 @@ Everyone contributes through a fork. Nobody gets write access to the repository,
 that is the same rule for everyone.
 
 ```bash
-gh repo fork Dpro-at/Tel-Agent --clone
-cd Tel-Agent
-git remote -v          # expect: origin = your fork, upstream = Dpro-at
+gh repo fork Adeeb-Hoque/opulentus --clone
+cd Opulentus
+git remote -v          # expect: origin = your fork, upstream = Adeeb-Hoque
 ```
 
 `gh repo fork --clone` sets `upstream` for you. If `git remote -v` does not show it:
 
 ```bash
-git remote add upstream https://github.com/Dpro-at/Tel-Agent.git
+git remote add upstream https://github.com/Adeeb-Hoque/opulentus.git
 ```
 
 ### 3.4 — Check the email on your commits
@@ -310,7 +310,7 @@ is useful; a silent one wastes a review cycle.
 
 ```bash
 git push -u origin <branch>
-gh pr create --repo Dpro-at/Tel-Agent --title "<same as the commit>" --body "..."
+gh pr create --repo Adeeb-Hoque/opulentus --title "<same as the commit>" --body "..."
 ```
 
 The body says: what you did, what you deliberately did not do, and how you tested it.
@@ -318,9 +318,6 @@ Link the issue with `Closes #<number>`. Paste the output of the Verify commands.
 
 Open it as a **draft** while it is not ready. Ready for review means you believe it is
 done.
-
-**The CLA.** The first pull request cannot be merged until its author has signed the
-Contributor License Agreement. Expect to be asked.
 
 ## Step 7 — Review
 
@@ -338,7 +335,7 @@ contribution: it returns the task to the pool the same day instead of fourteen d
 later, which is when an inactive assignment is cleared automatically.
 
 ```bash
-gh issue comment <number> --repo Dpro-at/Tel-Agent --body "I cannot finish this - unassigning so somebody else can take it."
+gh issue comment <number> --repo Adeeb-Hoque/opulentus --body "I cannot finish this - unassigning so somebody else can take it."
 ```
 
 ## What "done" means

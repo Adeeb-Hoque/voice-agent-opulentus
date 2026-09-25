@@ -33,7 +33,7 @@ from api.db import Base
 from api.models.common import enum_column, utc_now_column, workspace_fk
 from api.models.encrypted import EncryptedStr
 
-# The twenty-four channels Tel-Agent commits to. The list is no longer closed
+# The twenty-four channels Opulentus commits to. The list is no longer closed
 # (D-032) — a channel is an extension — but these are the kinds the core ships
 # support for, and `channels.app_id` is what points at the extension that actually
 # implements one. D-044 added the last fourteen in one migration rather than one
@@ -124,7 +124,7 @@ class Number(Base):
 
     `owner` is §B5 decision 3, and it is here in the first migration for one reason:
     once both kinds of number exist, backfilling it means guessing. It separates a
-    self-hoster's own number from one resold by Tel-Agent Cloud, and it governs who may
+    self-hoster's own number from one resold by Opulentus Cloud, and it governs who may
     release or port it.
     """
 

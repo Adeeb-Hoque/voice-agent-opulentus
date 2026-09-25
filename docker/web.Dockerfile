@@ -8,7 +8,7 @@
 # the CSP's connect-src is derived from it. The default serves an installation
 # reached as http://localhost:38471 with the API published on localhost:38472. An
 # installation reached under another name rebuilds with its own value; the compose
-# file wires that through TEL_AGENT_PUBLIC_API_URL.
+# file wires that through OPULENTUS_PUBLIC_API_URL.
 
 FROM node:22-alpine AS build
 

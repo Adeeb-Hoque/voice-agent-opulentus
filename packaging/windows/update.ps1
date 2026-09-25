@@ -2,11 +2,11 @@ $ErrorActionPreference = "Stop"
 
 $app = $PSScriptRoot
 $current = [Version](Get-Content (Join-Path $app "version.txt") -Raw).ToString()
-$release = Invoke-RestMethod -Headers @{ "User-Agent" = "Tel-Agent updater" } -Uri "https://api.github.com/repos/Dpro-at/Tel-Agent/releases/latest"
+$release = Invoke-RestMethod -Headers @{ "User-Agent" = "Opulentus updater" } -Uri "https://api.github.com/repos/Adeeb-Hoque/opulentus/releases/latest"
 $candidate = [Version]($release.tag_name.TrimStart("v"))
 if ($candidate -le [Version]$current) { exit 0 }
 
-$asset = $release.assets | Where-Object { $_.name -match "^Tel-Agent-.+-windows-x64-unsigned\\.exe$" } | Select-Object -First 1
+$asset = $release.assets | Where-Object { $_.name -match "^Opulentus-.+-windows-x64-unsigned\\.exe$" } | Select-Object -First 1
 if (-not $asset) { exit 0 }
 
 $installer = Join-Path $env:TEMP $asset.name

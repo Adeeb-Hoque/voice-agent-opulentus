@@ -1,7 +1,7 @@
 """Webhooks — how the operator's own software hears what happened.
 
 §B5's row is `id, workspace_id, url, events[], secret`, and Rule 5 is why it matters
-more than its size suggests: everything outside Tel-Agent's column is reached through
+more than its size suggests: everything outside Opulentus's column is reached through
 webhooks and the generic HTTP tool. This table is the mechanism that lets "add one
 more integration" have an answer that is not "add one more connector".
 

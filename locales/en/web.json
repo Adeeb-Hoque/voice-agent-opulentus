@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "Tel-Agent"
+    "name": "Opulentus"
   },
   "nav": {
     "home": "Home",
@@ -99,7 +99,7 @@
     "empty_title": "No accounts exist on this installation",
     "empty_body": "This is a fresh install and nobody has signed up yet. The first account you create becomes the administrator — it can add everyone else afterwards.",
     "empty_action": "Create the first account",
-    "offline_title": "This browser cannot reach your Tel-Agent server",
+    "offline_title": "This browser cannot reach your Opulentus server",
     "offline_body": "No response from {host}. Your calls are unaffected if the machine is still running — this is a network problem between you and it. Check that you are on the business network or connected to the VPN.",
     "offline_retry": "Retry connection",
     "self_hosted": "Self-hosted · nothing leaves this machine",

@@ -15,7 +15,7 @@
   "no_mail_body": "No mail server is configured, so there is nowhere to send a code. An administrator resets the password on the machine itself:",
   "no_mail_hint": "The command prints a new password once. It is not stored and cannot be shown again.",
   "no_mail_settings": "Configure a mail server in Settings",
-  "offline_title": "This browser cannot reach your Tel-Agent server",
+  "offline_title": "This browser cannot reach your Opulentus server",
   "offline_body": "No response from {host}. Your calls are unaffected if the machine is still running — this is a network problem between you and it. Check that you are on the business network or connected to the VPN.",
   "offline_retry": "Retry connection"
 }

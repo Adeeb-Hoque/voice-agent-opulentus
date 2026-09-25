@@ -1,18 +1,18 @@
-# The Tel-Agent API and agent loop. Configuration lives in
-# /etc/tel-agent/tel-agent.env; data in /var/lib/tel-agent.
+# The Opulentus API and agent loop. Configuration lives in
+# /etc/opulentus/opulentus.env; data in /var/lib/opulentus.
 
 [Unit]
-Description=Tel-Agent API
+Description=Opulentus API
 After=network-online.target
 Wants=network-online.target
 
 [Service]
 Type=exec
-User=telagent
-Group=telagent
-EnvironmentFile=/etc/tel-agent/tel-agent.env
-WorkingDirectory=/opt/tel-agent
-ExecStart=/bin/sh /opt/tel-agent/api-start.sh
+User=opulentus
+Group=opulentus
+EnvironmentFile=/etc/opulentus/opulentus.env
+WorkingDirectory=/opt/opulentus
+ExecStart=/bin/sh /opt/opulentus/api-start.sh
 Restart=on-failure
 RestartSec=3
 
@@ -21,7 +21,7 @@ RestartSec=3
 NoNewPrivileges=true
 ProtectSystem=strict
 ProtectHome=true
-ReadWritePaths=/var/lib/tel-agent
+ReadWritePaths=/var/lib/opulentus
 PrivateTmp=true
 ProtectKernelTunables=true
 ProtectControlGroups=true

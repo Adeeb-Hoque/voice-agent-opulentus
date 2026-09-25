@@ -1,7 +1,7 @@
 # AGENTS.md — guidance for AI coding agents
 
-You are working in **Tel-Agent**, an AGPL-3.0 self-hosted AI phone and messaging
-assistant by Dpro GmbH (Vienna). This file is the short entry point for any coding
+You are working in **Opulentus**, an AGPL-3.0 self-hosted AI phone and messaging
+assistant made by Opulentus and built by Adeeb. This file is the short entry point for any coding
 agent — Claude Code, OpenAI Codex, GitHub Copilot, Cursor, Google Antigravity,
 Gemini CLI, Windsurf, Zed, Aider, and anything else that reads `AGENTS.md`.
 
@@ -99,12 +99,12 @@ OpenAI Codex, Google Antigravity, and sometimes a human contributor). They do no
 each other. The branches and pull requests on GitHub are the only shared state, so:
 
 1. **One task, one branch, one PR, your own worktree.** Never edit `main` directly.
-   `git worktree add ../tel_agent-<task> -b <prefix>/<task>` keeps agents from
+   `git worktree add ../opulentus-<task> -b <prefix>/<task>` keeps agents from
    stepping on each other's working trees.
 2. **Say who you are.** The first line of every PR description is
    `Agent: claude-code` / `Agent: codex` / `Agent: antigravity` / `Agent: human`.
 3. **Check for an open PR on the same files before you start.**
-   `gh pr list --repo Dpro-at/Tel-Agent --json number,title,headRefName,files`
+   `gh pr list --repo Adeeb-Hoque/opulentus --json number,title,headRefName,files`
    If one exists, do not open a second — comment on it or ask the maintainer.
 4. **Never review your own PR.** Ask another agent, or the maintainer, for the review.
 5. **The maintainer merges.** Do not merge, do not force-push, do not delete branches

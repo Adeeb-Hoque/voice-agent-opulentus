@@ -2,7 +2,7 @@
 
 The second channel on the declarative contract (D-044): a `Setup` beside the transport,
 the generic card, the generic door, and no routes of its own. The credentials belong to
-the customer's own bot registration; Tel-Agent holds no shared application here any more
+the customer's own bot registration; Opulentus holds no shared application here any more
 than it does anywhere else.
 
 **Teams is a channel under the same test the other workplace messengers pass** (§B13):

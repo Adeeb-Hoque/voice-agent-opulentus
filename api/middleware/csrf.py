@@ -97,7 +97,7 @@ def origin_allowed(
       installation, whatever scheme sits in front of it.
 
     The same-host comparison ignores the scheme on purpose. Behind a reverse proxy the
-    browser says `https://telagent.local` while the request reaches this process as
+    browser says `https://opulentus.local` while the request reaches this process as
     plain HTTP, and comparing schemes would refuse every installation that terminates
     TLS in front — the recommended deployment. A scheme downgrade is a
     man-in-the-middle problem, which no CSRF check defends against anyway.

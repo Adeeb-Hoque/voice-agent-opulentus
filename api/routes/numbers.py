@@ -14,7 +14,7 @@ when their real shape is known. Until then a number is what a person can safely
 type: the E.164 and who provides it.
 
 **`owner` is §B5 decision 3.** Every number added here is `customer` — users
-bring their own number in v1, and reselling belongs to Tel-Agent Cloud. The
+bring their own number in v1, and reselling belongs to Opulentus Cloud. The
 release guard still checks it: a platform-held number must never be releasable
 from a self-hosted dashboard, and the rule is cheaper to write now than to
 retrofit after both kinds exist.
@@ -229,7 +229,7 @@ async def release_number(
     """Removes the record here - the provider contract is the customer's own affair.
 
     The dashboard cannot cancel a number with the provider and does not pretend to;
-    what release means is that Tel-Agent stops knowing about it.
+    what release means is that Opulentus stops knowing about it.
     """
     db: DbSession = request.state.db
 
@@ -239,7 +239,7 @@ async def release_number(
 
     if row.owner != "customer":
         # §B5 decision 3: who holds the number governs who may release it. A
-        # platform-held number is Tel-Agent Cloud's to release, not this dashboard's.
+        # platform-held number is Opulentus Cloud's to release, not this dashboard's.
         return envelope_response(
             status_code=status.HTTP_403_FORBIDDEN,
             code="platform_number",

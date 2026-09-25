@@ -6,7 +6,7 @@
 # python-build-standalone) and its own Node, because "which Python does your distro
 # ship" is exactly the support question a packaged product exists to remove. The
 # cost is size; the win is that one artifact behaves the same on Debian, Ubuntu,
-# Fedora and RHEL. Everything lands under /opt/tel-agent, and the venv is created
+# Fedora and RHEL. Everything lands under /opt/opulentus, and the venv is created
 # at its final absolute path so it needs no relocation tricks.
 #
 # Usage: packaging/linux/build-tree.sh <amd64|arm64> <staging-dir>
@@ -29,8 +29,8 @@ case "$ARCH" in
   *) echo "unsupported arch: $ARCH" >&2; exit 1 ;;
 esac
 
-OPT="$STAGE/opt/tel-agent"
-mkdir -p "$OPT" "$STAGE/etc/tel-agent" "$STAGE/usr/lib/systemd/system"
+OPT="$STAGE/opt/opulentus"
+mkdir -p "$OPT" "$STAGE/etc/opulentus" "$STAGE/usr/lib/systemd/system"
 
 # --- CPython ---------------------------------------------------------------
 curl -fsSL -o /tmp/python.tar.gz \
@@ -54,7 +54,7 @@ tar -xJf /tmp/node.tar.xz -C "$OPT/node" --strip-components=1
 "$OPT/python/bin/python3" -m pip install --no-cache-dir .
 
 # The source tree rides along, exactly as in the container (/app): the services
-# run with /opt/tel-agent as their working directory, so `api`, `agent` and the
+# run with /opt/opulentus as their working directory, so `api`, `agent` and the
 # `locales/` the widget reads resolve from here - the same layout the container
 # was proven on. The migration chain and its config come for the same reason.
 cp -r api "$OPT/api"
@@ -77,9 +77,9 @@ if [ -d web/public ]; then
 fi
 
 # --- Config template, services, launcher -----------------------------------
-cp packaging/linux/tel-agent.env "$STAGE/etc/tel-agent/tel-agent.env"
-cp packaging/linux/tel-agent-api.service "$STAGE/usr/lib/systemd/system/"
-cp packaging/linux/tel-agent-web.service "$STAGE/usr/lib/systemd/system/"
+cp packaging/linux/opulentus.env "$STAGE/etc/opulentus/opulentus.env"
+cp packaging/linux/opulentus-api.service "$STAGE/usr/lib/systemd/system/"
+cp packaging/linux/opulentus-web.service "$STAGE/usr/lib/systemd/system/"
 cp packaging/linux/api-start.sh "$OPT/api-start.sh"
 
 echo "staged $(du -sh "$STAGE" | cut -f1) for $ARCH"

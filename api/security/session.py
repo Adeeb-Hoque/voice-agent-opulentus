@@ -25,7 +25,7 @@ from api.models import Session, User
 
 logger = logging.getLogger("api.auth")
 
-COOKIE_NAME = "telagent_session"
+COOKIE_NAME = "opulentus_session"
 
 # Fourteen days. Long enough that a reception desk is not signing in every morning,
 # short enough that a forgotten browser stops being a way in within a fortnight.

@@ -1,5 +1,5 @@
 {
-  "brand": "Tel-Agent",
+  "brand": "Opulentus",
   "title": "Schermen",
   "intro": "Zesentwintig schermen. Elk app-scherm opent met een statuswisselaar bovenaan — standaard, leeg, laden, fout, offline — en de zijbalk draagt de donker/licht-schakelaar, het account- en werkruimtemenu, en de melding voor inkomende oproepen.",
   "reference_label": "Referentiescherm",
@@ -76,7 +76,7 @@
     },
     "connectors": {
       "title": "Connectors",
-      "desc": "MCP-toolservers die de agent tijdens een gesprek aanroept: wie elk ervan draait, welke tools ervan mogen draaien, en wat kapot is. De andere richting — Tel-Agent als server — blijft in Instellingen."
+      "desc": "MCP-toolservers die de agent tijdens een gesprek aanroept: wie elk ervan draait, welke tools ervan mogen draaien, en wat kapot is. De andere richting — Opulentus als server — blijft in Instellingen."
     },
     "usage": {
       "title": "Gebruik",

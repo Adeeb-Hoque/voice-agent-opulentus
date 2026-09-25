@@ -72,12 +72,12 @@ def _snippet(request: Request, path: str) -> str:
     """The line the customer pastes, built against the address they will actually use.
 
     Composed from the request's own base URL rather than a configured one: an
-    installation reached at `telagent.wagner-partner.local` must be told to paste that,
+    installation reached at `opulentus.wagner-partner.local` must be told to paste that,
     and a hard-coded hostname is how a snippet ends up pointing at the developer's
     machine.
     """
     base = str(request.base_url).rstrip("/")
-    return f'<script src="{base}/embed.js" data-tel-agent="{path}" defer></script>'
+    return f'<script src="{base}/embed.js" data-opulentus="{path}" defer></script>'
 
 
 def _out(request: Request, row: Channel) -> WebChannelOut:

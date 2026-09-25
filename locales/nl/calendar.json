@@ -23,6 +23,6 @@
   "offline_retry": "Opnieuw proberen",
   "error_label": "Agenda kon niet worden geladen",
   "error_title": "De agendaserver heeft de inloggegevens geweigerd",
-  "error_body": "Tel-Agent bereikte de CalDAV-server maar werd bij het inloggen geweigerd — het app-wachtwoord is waarschijnlijk ingetrokken of verlopen. Tot het is vervangen biedt de agent aan een bericht op te nemen in plaats van tijden voor te stellen.",
+  "error_body": "Opulentus bereikte de CalDAV-server maar werd bij het inloggen geweigerd — het app-wachtwoord is waarschijnlijk ingetrokken of verlopen. Tot het is vervangen biedt de agent aan een bericht op te nemen in plaats van tijden voor te stellen.",
   "error_update": "Inloggegevens bijwerken"
 }

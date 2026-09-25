@@ -27,7 +27,7 @@ logger = logging.getLogger("api.backup")
 
 # Written and deleted by the probe. Named so an operator who finds one left behind
 # after a crash knows what it was.
-PROBE_NAME = ".telagent-write-test"
+PROBE_NAME = ".opulentus-write-test"
 
 
 @dataclass(frozen=True)
@@ -72,9 +72,9 @@ def probe(configured: str | None) -> Probe:
 
     probe_file = target / PROBE_NAME
     try:
-        probe_file.write_bytes(b"telagent")
+        probe_file.write_bytes(b"opulentus")
         # Read back, because a share can accept a write and drop it.
-        if probe_file.read_bytes() != b"telagent":
+        if probe_file.read_bytes() != b"opulentus":
             return Probe(False, str(target), "the target accepted a write and returned nothing")
     except OSError as error:
         return Probe(False, str(target), f"cannot write there: {error.strerror or error}")
@@ -123,7 +123,7 @@ def usable_name(taken_at: str, kind: str) -> str:
     one, which is exactly where these files go.
     """
     stamp = taken_at.replace(":", "").replace("-", "").replace("+0000", "Z")
-    return f"telagent-{stamp}-{kind}.tar.gz".replace(" ", "T")
+    return f"opulentus-{stamp}-{kind}.tar.gz".replace(" ", "T")
 
 
 def remove(path: str | os.PathLike[str]) -> None:

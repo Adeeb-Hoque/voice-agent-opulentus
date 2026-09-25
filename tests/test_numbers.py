@@ -37,7 +37,7 @@ async def stage(migrated: AsyncSession, settings: Settings, database_url: str):
         ),
         "platform": Number(
             workspace_id=mine.id,
-            provider="telagent-cloud",
+            provider="opulentus-cloud",
             owner="platform",
             e164="+43720999999",
             status="active",

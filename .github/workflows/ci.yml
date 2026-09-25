@@ -77,26 +77,26 @@ jobs:
       postgres:
         image: postgres:17
         env:
-          POSTGRES_USER: telagent
-          POSTGRES_PASSWORD: telagent
-          POSTGRES_DB: telagent_test
+          POSTGRES_USER: opulentus
+          POSTGRES_PASSWORD: opulentus
+          POSTGRES_DB: opulentus_test
         ports:
           - 5432:5432
         # `pg_isready` with no arguments connects as the container's own OS user,
         # `root`, to a database of the same name. Neither exists, so every check logs
         # `FATAL: role "root" does not exist` - and still reports success, because the
         # server answered. That is the bug: it answers during initialisation, from a
-        # temporary server that has not yet created `telagent_test`, so the job can
+        # temporary server that has not yet created `opulentus_test`, so the job can
         # start against a database that is not there and then wait for one forever.
         # Naming the real user and the real database is what makes readiness mean it.
         options: >-
-          --health-cmd "pg_isready -U telagent -d telagent_test"
+          --health-cmd "pg_isready -U opulentus -d opulentus_test"
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
 
     env:
-      TEST_POSTGRES_URL: postgresql+asyncpg://telagent:telagent@localhost:5432/telagent_test
+      TEST_POSTGRES_URL: postgresql+asyncpg://opulentus:opulentus@localhost:5432/opulentus_test
 
     steps:
       - uses: actions/checkout@v4

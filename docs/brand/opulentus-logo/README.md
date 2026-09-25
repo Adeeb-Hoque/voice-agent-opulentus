@@ -1,4 +1,4 @@
-# Tel-Agent logo
+# Opulentus logo
 
 The mark is a headset octopus: the arms stand for conversations handled in
 parallel, which is what the product does. As channels are added at Milestone 11
@@ -38,12 +38,12 @@ Everything sits flat in this folder.
 | File | Use |
 |---|---|
 | `index.html` | Visual sheet. Self-contained — every mark is embedded, so it renders even if moved |
-| `tel-agent-octopus-{purple,white}.svg` | Full colour. Purple works on dark and light; white needs a dark background |
-| `tel-agent-octopus-{purple,white}-{512,256,128,64,32}.png` | Full colour, transparent raster |
-| `tel-agent-octopus-flat-{purple,white,black}.svg` | Knockout, one flat colour |
-| `tel-agent-octopus-line-{purple,white,black}.svg` | Outline, one flat colour |
-| `tel-agent-octopus-solid-{purple,white,black}.svg` | Silhouette, one flat colour |
-| `tel-agent-octopus-flat-{purple,white,black}-{64,32,16}.png` | Knockout at icon sizes. Favicon and app chrome |
+| `opulentus-octopus-{purple,white}.svg` | Full colour. Purple works on dark and light; white needs a dark background |
+| `opulentus-octopus-{purple,white}-{512,256,128,64,32}.png` | Full colour, transparent raster |
+| `opulentus-octopus-flat-{purple,white,black}.svg` | Knockout, one flat colour |
+| `opulentus-octopus-line-{purple,white,black}.svg` | Outline, one flat colour |
+| `opulentus-octopus-solid-{purple,white,black}.svg` | Silhouette, one flat colour |
+| `opulentus-octopus-flat-{purple,white,black}-{64,32,16}.png` | Knockout at icon sizes. Favicon and app chrome |
 | `original-artwork.png` | The raster original everything here was traced from |
 | `original-variant-sheet.png` | The four-variant sheet the artwork came from |
 

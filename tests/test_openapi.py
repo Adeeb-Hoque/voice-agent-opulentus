@@ -121,4 +121,4 @@ def test_documenting_the_api_did_not_change_it(document: dict) -> None:
     operations = _operations(document)
     assert len(operations) > 80, f"only {len(operations)} operations survived the override"
     assert "/api/conversations/{conversation_id}/whisper" in document["paths"]
-    assert document["info"]["title"] == "Tel-Agent"
+    assert document["info"]["title"] == "Opulentus"

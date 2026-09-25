@@ -1,5 +1,5 @@
 {
-  "brand": "Tel-Agent",
+  "brand": "Opulentus",
   "title": "Bildschirme",
   "intro": "Sechsundzwanzig Bildschirme. Jeder Bildschirm der Anwendung beginnt oben mit einem Zustandsumschalter — Standard, leer, lädt, Fehler, offline — und die Seitenleiste trägt den Hell-/Dunkel-Schalter, das Konto- und Arbeitsbereichsmenü sowie die Benachrichtigung über eingehende Anrufe.",
   "reference_label": "Referenzbildschirm",
@@ -76,7 +76,7 @@
     },
     "connectors": {
       "title": "Konnektoren",
-      "desc": "MCP-Werkzeugserver, die der Agent während eines Anrufs aufruft: wer sie jeweils betreibt, welche ihrer Werkzeuge laufen dürfen und was ausgefallen ist. Die Gegenrichtung — Tel-Agent als Server — bleibt in den Einstellungen."
+      "desc": "MCP-Werkzeugserver, die der Agent während eines Anrufs aufruft: wer sie jeweils betreibt, welche ihrer Werkzeuge laufen dürfen und was ausgefallen ist. Die Gegenrichtung — Opulentus als Server — bleibt in den Einstellungen."
     },
     "usage": {
       "title": "Verbrauch",

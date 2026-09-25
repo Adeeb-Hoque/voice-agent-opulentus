@@ -1,10 +1,10 @@
 """The Signal transport — a number on the REST bridge the customer runs beside us, §B13.
 
 Signal publishes no server API for businesses. The customer registers or links a number
-on a community REST bridge running next to Tel-Agent, on the same machine or the same
+on a community REST bridge running next to Opulentus, on the same machine or the same
 network, and gives the card two things: the bridge's address and the number. There is
 no secret, because the bridge is the account; whoever can reach its address can send
-as that number. Tel-Agent holds no shared application and exposes nothing.
+as that number. Opulentus holds no shared application and exposes nothing.
 
 **Dial-out, by long poll.** Inbound is the bridge's receive endpoint, called with a
 timeout so it returns as soon as something arrives. Outbound is its send endpoint.
@@ -85,9 +85,9 @@ _LOCAL_SUFFIXES = (".local", ".lan", ".internal", ".home.arpa")
 SETUP = Setup(
     kind=KIND,
     title="Signal",
-    note="A Signal number on the REST bridge you run beside Tel-Agent answers direct "
+    note="A Signal number on the REST bridge you run beside Opulentus answers direct "
     "messages, and group messages that mention it. Run the bridge in its normal or "
-    "native mode. Tel-Agent collects messages from it and exposes nothing to the "
+    "native mode. Opulentus collects messages from it and exposes nothing to the "
     "internet.",
     guide_url="https://support.signal.org/hc/en-us/articles/360007320551-Linked-Devices",
     fields=(
@@ -95,7 +95,7 @@ SETUP = Setup(
             "base_url",
             "Bridge address",
             secret=False,
-            help="Where Tel-Agent reaches the bridge. Plain http only on your own network.",
+            help="Where Opulentus reaches the bridge. Plain http only on your own network.",
             placeholder="http://127.0.0.1:8080",
         ),
         Field(

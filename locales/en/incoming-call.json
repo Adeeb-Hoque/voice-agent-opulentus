@@ -15,7 +15,7 @@
   "took_call": "Rezeption Wagner took that call — ring again",
   "rejected": "Call rejected — ring again",
   "hidden": "Notification hidden — ring again",
-  "no_phone": "You cannot take this call: no phone is registered to you. Add a desk phone or sign in to the Tel-Agent app on Numbers and phones.",
+  "no_phone": "You cannot take this call: no phone is registered to you. Add a desk phone or sign in to the Opulentus app on Numbers and phones.",
   "read_only": "Your role in this workspace is read only. You can listen and read the transcript, but not take the call.",
   "line_main": "Main business line",
   "line_partners": "Direct line for partners",

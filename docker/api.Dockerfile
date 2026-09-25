@@ -30,7 +30,7 @@ RUN pip install --no-cache-dir --no-deps --force-reinstall .
 FROM python:3.12-slim
 
 # Never root: this process parses strangers' input for a living (§B14).
-RUN useradd --create-home --uid 1000 telagent
+RUN useradd --create-home --uid 1000 opulentus
 WORKDIR /app
 
 COPY --from=build /usr/local/lib/python3.12/site-packages /usr/local/lib/python3.12/site-packages
@@ -39,16 +39,16 @@ COPY --from=build /app /app
 COPY docker/api-entrypoint.sh /entrypoint.sh
 
 # Conversations, the SQLite database and backups live here, on a volume.
-RUN mkdir -p /data && chown telagent:telagent /data /app
+RUN mkdir -p /data && chown opulentus:opulentus /data /app
 VOLUME /data
 
-USER telagent
+USER opulentus
 
 # Inside the container the server must listen on the bridge interface - the host
 # decides what is published, and the compose file publishes loopback only.
 ENV BIND_HOST=0.0.0.0 \
     BIND_PORT=38472 \
-    DATABASE_URL=sqlite+aiosqlite:////data/tel-agent.db
+    DATABASE_URL=sqlite+aiosqlite:////data/opulentus.db
 
 EXPOSE 38472
 

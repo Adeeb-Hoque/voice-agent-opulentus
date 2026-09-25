@@ -59,17 +59,17 @@ else can actually review.
 ## Do exactly this
 
 **First, say which file you are taking.** Every language has an open issue —
-[search the `i18n` label](https://github.com/Dpro-at/Tel-Agent/issues?q=is%3Aissue+is%3Aopen+label%3Ai18n)
+[search the `i18n` label](https://github.com/Adeeb-Hoque/opulentus/issues?q=is%3Aissue+is%3Aopen+label%3Ai18n)
 for yours, and use
-[#29](https://github.com/Dpro-at/Tel-Agent/issues/29) if it is not there yet. Leave a
+[#29](https://github.com/Adeeb-Hoque/opulentus/issues/29) if it is not there yet. Leave a
 comment naming the file. Nothing gets assigned and you do not wait for an answer —
 several people work on one language at the same time, each on a different file, and the
 comment is what stops two of you translating the same one.
 
 ```bash
-# 1. Fork github.com/Dpro-at/Tel-Agent on GitHub, then clone YOUR fork
-git clone https://github.com/<your-username>/Tel-Agent.git
-cd Tel-Agent
+# 1. Fork github.com/Adeeb-Hoque/opulentus on GitHub, then clone YOUR fork
+git clone https://github.com/<your-username>/Opulentus.git
+cd Opulentus
 
 # 2. The email on your commits must belong to your GitHub account, or the work
 #    merges with your name on nothing
@@ -93,16 +93,11 @@ git commit -m "feat(locales): translate code.json into French"
 git push origin feat/fr-code-json
 ```
 
-Then open the pull request from your fork. Two lines have to be in the description:
+Then open the pull request from your fork with this line in the description:
 
 ```
 Refs #<the number of your language's issue>
-I have read the CLA document and I hereby sign the CLA.
 ```
-
-The CLA line is not optional — **the first pull request cannot be merged without it**,
-and it has to be that exact sentence. See [`CLA.md`](../CLA.md) for what you are
-signing: you keep full ownership and copyright of your work.
 
 `Refs`, not `Closes`. Your language's issue covers all 33 files and stays open until
 the language is finished, so a pull request must not close it.
@@ -127,7 +122,7 @@ whether it arrived.
   native speaker it is wrong, whatever the dictionary says. Only take a language you
   actually speak.
 
-Product names stay as they are — Tel-Agent, WhatsApp, SMS — and so do phone numbers,
+Product names stay as they are — Opulentus, WhatsApp, SMS — and so do phone numbers,
 prices, timestamps and anything else in Latin script. Keep it short: these are buttons
 and labels, and a translation twice the length of the English breaks the layout it sits
 in. [`locales/README.md`](../locales/README.md) has the rest.
@@ -146,7 +141,7 @@ If that does not happen, say so — being ignored is the project's failure, not 
 
 Once it merges, everything on the board is open to you:
 
-- The board: <https://github.com/orgs/Dpro-at/projects/6> — take from the `Ready`
+- The board: <https://github.com/Adeeb-Hoque/opulentus/projects> — take from the `Ready`
   column, and look for `level: first-issue`
 - [`CONTRIBUTING.md`](../CONTRIBUTING.md) — the full workflow, the scope rules, and what
   the project is not accepting yet

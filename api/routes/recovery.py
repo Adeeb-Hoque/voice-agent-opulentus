@@ -45,7 +45,7 @@ router = APIRouter(prefix="/api/auth", tags=["authentication"])
 # The reset ticket. Issued once a code or a key has been accepted, and spent by
 # `/password/reset`. A cookie rather than a body value so it is `HttpOnly` like the
 # session — a token that authorises a password change is worth as much as a session.
-RESET_COOKIE = "telagent_reset"
+RESET_COOKIE = "opulentus_reset"
 RESET_TTL_SECONDS = 15 * 60
 
 # Held in the process rather than the database. It lives fifteen minutes, a restart
@@ -165,7 +165,7 @@ async def forgot(request: Request, payload: ForgotRequest) -> object:
             "send_email",
             {
                 "to": user.email,
-                "subject": "Your Tel-Agent sign-in code",
+                "subject": "Your Opulentus sign-in code",
                 "body": mail.reset_code_body(
                     code, int(codes.CODE_LIFETIME.total_seconds() // 60)
                 ),

@@ -21,7 +21,7 @@
   "release_confirm": "Diese Rufnummer freigeben",
   "release_cancel": "Behalten",
   "empty_title": "Noch keine Rufnummern",
-  "empty_body": "Fügen Sie die Rufnummer hinzu, die Sie bei Ihrem Anbieter gekauft haben, und sie erscheint hier. Der Vertrag bleibt Ihrer — Tel-Agent führt nur den Eintrag.",
+  "empty_body": "Fügen Sie die Rufnummer hinzu, die Sie bei Ihrem Anbieter gekauft haben, und sie erscheint hier. Der Vertrag bleibt Ihrer — Opulentus führt nur den Eintrag.",
   "error_invalid_e164": "Eine Rufnummer wird als +, Ländervorwahl, Ziffern geschrieben — etwa +43 720 123456.",
   "error_number_taken": "Dieser Workspace hat diese Rufnummer bereits.",
   "error_platform_number": "Diese Rufnummer hält die Plattform; sie kann hier nicht freigegeben werden.",

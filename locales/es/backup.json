@@ -23,7 +23,7 @@
   "target_s3_note": "Cifrado con una clave que solo existe aquí. Si pierdes la clave, el proveedor no puede ayudarte — anótala en algún sitio físico.",
   "target_usb": "Un disco USB",
   "target_usb_body": "Conectado a esta máquina. Funciona, pero solo si alguien se acuerda de cambiarlo y llevarse uno a casa.",
-  "target_usb_note": "La opción que más se olvida. Tel-Agent te avisa aquí si no se ha visto ningún disco en una semana.",
+  "target_usb_note": "La opción que más se olvida. Opulentus te avisa aquí si no se ha visto ningún disco en una semana.",
   "target_none": "Ningún sitio",
   "target_none_body": "Sin copia alguna. Todo vive en un disco de una máquina.",
   "target_none_note": "Un disco averiado y cada llamada, transcripción y contacto desaparece, sin copia en ninguna parte.",

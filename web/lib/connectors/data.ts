@@ -1,6 +1,6 @@
 /**
  * MCP servers the assistants call while a caller is on the line. Most are not ours —
- * Tel-Agent only decides which of their tools may run.
+ * Opulentus only decides which of their tools may run.
  *
  * Every piece of prose is a key into `locales/<lang>/connectors.json`. What stays a
  * literal here is machine-readable: tool identifiers, transports and addresses,

@@ -1,6 +1,6 @@
 """Start the API — the entry point that honours where it is told to listen.
 
-    python -m api          # or `tel-agent`, once installed
+    python -m api          # or `opulentus`, once installed
 
 **Why this exists at all: a default only counts if something applies it.** The README
 has said "do not expose the port to the internet" since before there was a port, and

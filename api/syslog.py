@@ -1,7 +1,7 @@
 """The recent log, kept so the health screen can show it — P6.
 
 Logs already go to stdout as JSON. That is right for anything collecting them, and
-useless to the one person this product is built for: somebody running Tel-Agent on a
+useless to the one person this product is built for: somebody running Opulentus on a
 machine in their own office, who has a browser and no journal viewer. §B8's health
 screen has had a Log panel drawn since the beginning with nothing behind it.
 

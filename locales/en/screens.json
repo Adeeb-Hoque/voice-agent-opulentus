@@ -1,5 +1,5 @@
 {
-  "brand": "Tel-Agent",
+  "brand": "Opulentus",
   "title": "Screens",
   "intro": "Twenty-six screens. Every app screen opens with a state switcher at the top — default, empty, loading, error, offline — and the sidebar carries the dark/light switch, the account and workspace menu, and the incoming-call notification.",
   "reference_label": "Reference screen",
@@ -76,7 +76,7 @@
     },
     "connectors": {
       "title": "Connectors",
-      "desc": "MCP tool servers the agent calls during a call: who runs each one, which of its tools may run, and what broke. The other direction — Tel-Agent as a server — stays in Settings."
+      "desc": "MCP tool servers the agent calls during a call: who runs each one, which of its tools may run, and what broke. The other direction — Opulentus as a server — stays in Settings."
     },
     "usage": {
       "title": "Usage",

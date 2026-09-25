@@ -101,7 +101,7 @@ export function AcceptInvite({
       <div className="border-od-border-9 bg-od-panel w-full max-w-[460px] rounded-xl border">
         <div className="border-od-line border-b p-[20px_22px]">
           <div className="flex items-baseline gap-2">
-            <span className="text-od-text font-semibold tracking-[-0.01em]">Tel-Agent</span>
+            <span className="text-od-text font-semibold tracking-[-0.01em]">Opulentus</span>
           </div>
         </div>
 

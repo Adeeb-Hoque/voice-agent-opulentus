@@ -61,5 +61,5 @@ parses the result to prove it.
 
 ## Trademarks
 
-Each mark belongs to its owner and appears here to name a model Tel-Agent can be
+Each mark belongs to its owner and appears here to name a model Opulentus can be
 pointed at. No endorsement or affiliation is implied.

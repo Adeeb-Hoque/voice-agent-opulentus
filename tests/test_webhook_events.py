@@ -63,7 +63,7 @@ async def stage(migrated: AsyncSession, settings: Settings, database_url: str):
 
     hook = Webhook(
         workspace_id=workspace.id,
-        url="https://wagner-partner.test/hooks/tel-agent",
+        url="https://wagner-partner.test/hooks/opulentus",
         events=["assistant.changed", "knowledge.changed", "conversation.ended"],
         secret=SECRET,
     )
@@ -216,13 +216,13 @@ async def test_send_test_delivers_a_signed_post_the_recipe_verifies(
 
     (request,) = caught
     body = request.content
-    timestamp = int(request.headers["X-Tel-Agent-Timestamp"])
+    timestamp = int(request.headers["X-Opulentus-Timestamp"])
     expected = (
         "sha256="
         + hmac.new(SECRET.encode(), f"{timestamp}.".encode() + body, hashlib.sha256).hexdigest()
     )
-    assert request.headers["X-Tel-Agent-Signature"] == expected
-    assert request.headers["X-Tel-Agent-Event"] == "webhook.test"
+    assert request.headers["X-Opulentus-Signature"] == expected
+    assert request.headers["X-Opulentus-Event"] == "webhook.test"
     assert json.loads(body)["event"] == "webhook.test"
 
 

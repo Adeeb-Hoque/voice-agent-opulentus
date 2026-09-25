@@ -23,6 +23,6 @@
   "offline_retry": "Retry",
   "error_label": "Calendar could not be loaded",
   "error_title": "The calendar server rejected the credentials",
-  "error_body": "Tel-Agent reached the CalDAV server but was refused at sign-in — the app password was most likely revoked or expired. Until it is replaced, the agent offers to take a message instead of proposing times.",
+  "error_body": "Opulentus reached the CalDAV server but was refused at sign-in — the app password was most likely revoked or expired. Until it is replaced, the agent offers to take a message instead of proposing times.",
   "error_update": "Update credentials"
 }

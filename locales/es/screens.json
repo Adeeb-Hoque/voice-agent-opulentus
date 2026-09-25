@@ -1,5 +1,5 @@
 {
-  "brand": "Tel-Agent",
+  "brand": "Opulentus",
   "title": "Pantallas",
   "intro": "Veintiséis pantallas. Cada pantalla de la aplicación comienza con un selector de estado en la parte superior — predeterminado, vacío, cargando, error, sin conexión — y la barra lateral incluye el interruptor de modo claro/oscuro, el menú de cuenta y espacio de trabajo, y la notificación de llamadas entrantes.",
   "reference_label": "Pantalla de referencia",
@@ -76,7 +76,7 @@
     },
     "connectors": {
       "title": "Conectores",
-      "desc": "Servidores de herramientas MCP que el agente usa durante una llamada: quién los ejecuta, qué herramientas pueden usarse y qué falló. La dirección inversa — Tel-Agent como servidor — está en Configuración."
+      "desc": "Servidores de herramientas MCP que el agente usa durante una llamada: quién los ejecuta, qué herramientas pueden usarse y qué falló. La dirección inversa — Opulentus como servidor — está en Configuración."
     },
     "usage": {
       "title": "Uso",

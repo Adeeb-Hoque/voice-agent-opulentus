@@ -23,6 +23,6 @@
   "offline_retry": "Erneut versuchen",
   "error_label": "Kalender konnte nicht geladen werden",
   "error_title": "Der Kalenderserver hat die Zugangsdaten abgelehnt",
-  "error_body": "Tel-Agent hat den CalDAV-Server erreicht, wurde aber bei der Anmeldung abgewiesen – das App-Passwort wurde vermutlich widerrufen oder ist abgelaufen. Bis es ersetzt ist, bietet der Agent an, eine Nachricht aufzunehmen, statt Zeiten vorzuschlagen.",
+  "error_body": "Opulentus hat den CalDAV-Server erreicht, wurde aber bei der Anmeldung abgewiesen – das App-Passwort wurde vermutlich widerrufen oder ist abgelaufen. Bis es ersetzt ist, bietet der Agent an, eine Nachricht aufzunehmen, statt Zeiten vorzuschlagen.",
   "error_update": "Zugangsdaten aktualisieren"
 }

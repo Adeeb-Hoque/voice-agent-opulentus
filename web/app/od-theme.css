@@ -1,4 +1,4 @@
-/* Tel-Agent theme tokens - dark default, light override on html[data-od-theme="light"].
+/* Opulentus theme tokens - dark default, light override on html[data-od-theme="light"].
    Imported verbatim from the Claude Design project so a re-sync stays a copy, not a merge. */
 :root {
   --od-canvas: #0A0C0F;

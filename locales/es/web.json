@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "Tel-Agent"
+    "name": "Opulentus"
   },
   "nav": {
     "home": "Inicio",
@@ -99,7 +99,7 @@
     "empty_title": "No existen cuentas en esta instalación",
     "empty_body": "Esta es una instalación nueva y nadie se ha registrado todavía. La primera cuenta que crees será el administrador — podrá añadir a los demás después.",
     "empty_action": "Crear la primera cuenta",
-    "offline_title": "Este navegador no puede conectarse a tu servidor Tel-Agent",
+    "offline_title": "Este navegador no puede conectarse a tu servidor Opulentus",
     "offline_body": "Sin respuesta desde {host}. Tus llamadas no se ven afectadas si la máquina sigue en funcionamiento — es un problema de red entre tú y ella. Verifica que estás en la red de la empresa o conectado a la VPN.",
     "offline_retry": "Reintentar conexión",
     "self_hosted": "Autoalojado · nada sale de esta máquina",

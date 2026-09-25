@@ -1,6 +1,6 @@
 """Sending email, and being honest when this installation cannot.
 
-Most Tel-Agent installations have no mail server. That is not a broken state to hide —
+Most Opulentus installations have no mail server. That is not a broken state to hide —
 the `forgot` screen has a designed answer for it:
 
 > "This installation cannot send email. No mail server is configured, so there is
@@ -151,7 +151,7 @@ def can_connect(config: MailConfig, *, timeout: float = 5.0) -> bool:
 
 def reset_code_body(code: str, minutes: int) -> str:
     return (
-        f"Your Tel-Agent sign-in code is {code}.\n\n"
+        f"Your Opulentus sign-in code is {code}.\n\n"
         f"It is good for {minutes} minutes and can be used once. "
         "If you did not ask for it, you can ignore this message - "
         "nothing has changed on your account."

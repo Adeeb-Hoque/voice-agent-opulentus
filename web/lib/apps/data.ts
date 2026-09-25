@@ -1,6 +1,6 @@
 /**
  * The app catalogue. `mcp` entries have no app of their own and do not need one —
- * the customer points Tel-Agent at an MCP server and its tools become callable.
+ * the customer points Opulentus at an MCP server and its tools become callable.
  *
  * Every piece of prose is a key into `locales/<lang>/apps.json`. A third-party
  * product keeps its own name as a literal; an app that is ours is named in copy.

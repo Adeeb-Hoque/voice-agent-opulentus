@@ -64,14 +64,17 @@ def test_an_empty_key_still_refuses_production() -> None:
 def test_a_synchronous_database_driver_is_refused() -> None:
     """A blocking driver stalls the event loop, and only under load."""
     with pytest.raises(ValidationError) as error:
-        _settings(database_url="postgresql://user:pass@localhost/telagent")
+        _settings(database_url="postgresql://user:pass@localhost/opulentus")
 
     assert "async driver" in str(error.value)
 
 
 @pytest.mark.parametrize(
     "url",
-    ["sqlite+aiosqlite:///./tel-agent.db", "postgresql+asyncpg://user:pass@localhost/telagent"],
+    [
+        "sqlite+aiosqlite:///./opulentus.db",
+        "postgresql+asyncpg://user:pass@localhost/opulentus",
+    ],
 )
 def test_both_supported_dialects_are_accepted(url: str) -> None:
     """D-029: SQLite and PostgreSQL, both from the first migration."""
@@ -88,20 +91,20 @@ def test_a_wildcard_cors_origin_is_refused() -> None:
 
 def test_comma_separated_origins_are_parsed() -> None:
     """A `.env` file holds strings, not JSON lists."""
-    settings = _settings(cors_origins="http://localhost:38471, https://telagent.local")
+    settings = _settings(cors_origins="http://localhost:38471, https://opulentus.local")
 
-    assert settings.cors_origins == ["http://localhost:38471", "https://telagent.local"]
+    assert settings.cors_origins == ["http://localhost:38471", "https://opulentus.local"]
 
 
 def test_settings_are_read_from_the_environment(monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.setenv("LOG_LEVEL", "WARNING")
-    monkeypatch.setenv("CORS_ORIGINS", "https://telagent.local")
+    monkeypatch.setenv("CORS_ORIGINS", "https://opulentus.local")
     get_settings.cache_clear()
 
     settings = get_settings()
 
     assert settings.log_level == "WARNING"
-    assert settings.cors_origins == ["https://telagent.local"]
+    assert settings.cors_origins == ["https://opulentus.local"]
 
 
 def test_an_invalid_log_level_names_the_variable() -> None:

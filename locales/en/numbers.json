@@ -21,7 +21,7 @@
   "release_confirm": "Release this number",
   "release_cancel": "Keep it",
   "empty_title": "No numbers yet",
-  "empty_body": "Add the number you bought from your provider and it appears here. The contract stays yours — Tel-Agent only keeps the record.",
+  "empty_body": "Add the number you bought from your provider and it appears here. The contract stays yours — Opulentus only keeps the record.",
   "error_invalid_e164": "A number is written as +, country code, digits — like +43 720 123456.",
   "error_number_taken": "This workspace already has that number.",
   "error_platform_number": "This number is held by the platform and cannot be released here.",

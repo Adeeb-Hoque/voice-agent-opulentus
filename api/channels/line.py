@@ -2,7 +2,7 @@
 
 The customer creates a Messaging API channel for their official account in their own
 LINE Developers console and pastes its channel secret and channel access token.
-Tel-Agent holds no shared provider. LINE delivers events to the channel's webhook - the
+Opulentus holds no shared provider. LINE delivers events to the channel's webhook - the
 address the settings card prints - and answers go out through the Messaging API.
 
 **The signature is the door's whole defence.** Every delivery carries

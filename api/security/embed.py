@@ -88,7 +88,7 @@ def check_origin(
     which is a guard that stops nothing and everything.
 
     Accepting it costs nothing a browser can abuse: a page on `evil.test` cannot send
-    `Origin: https://telagent.example`, because the browser writes that header and
+    `Origin: https://opulentus.example`, because the browser writes that header and
     scripts cannot. What may is a client that is not a browser, and the guards for that
     are the rate limit and the captcha - neither of which an origin check was ever going
     to provide.

@@ -9,7 +9,7 @@ below is §B14's:
 
 That is why a channel that does not exist, one that is disabled, and one whose allowlist
 refuses the caller all answer the same way. Distinguishing them would turn the address
-into an oracle: paste it anywhere and learn whether a business runs Tel-Agent, and
+into an oracle: paste it anywhere and learn whether a business runs Opulentus, and
 whether their widget is switched on.
 
 Milestone 0's step 0 and step 1 (`docs/ROADMAP.md`): refuse the wrong origin, and let the

@@ -145,7 +145,7 @@ def test_pool_sizing_applies_to_postgres_and_not_to_sqlite(settings: Settings) -
 
     postgres = create_engine(
         configured.model_copy(
-            update={"database_url": "postgresql+asyncpg://u:p@localhost/telagent"}
+            update={"database_url": "postgresql+asyncpg://u:p@localhost/opulentus"}
         )
     )
     sqlite = create_engine(configured)

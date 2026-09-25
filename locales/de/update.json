@@ -12,7 +12,7 @@
   "verdict_security_body": "Eine nicht authentifizierte Anfrage konnte Anruftranskripte auslesen, sofern die Oberfläche aus dem Internet erreichbar ist. Liegt Ihre nur im Firmennetz, besteht heute kein Risiko — installieren Sie sie trotzdem noch diese Woche.",
   "verdict_security_meta": "vor 2 Tagen veröffentlicht",
   "verdict_current_title": "Sie sind auf der aktuellen Version",
-  "verdict_current_body": "Nichts zu tun. Tel-Agent prüft nächtlich und schreibt Ihnen nur, wenn etwas die Installation wert ist.",
+  "verdict_current_body": "Nichts zu tun. Opulentus prüft nächtlich und schreibt Ihnen nur, wenn etwas die Installation wert ist.",
   "verdict_current_meta": "vor 1 Std. geprüft",
   "running_title": "Aktualisierung auf {version}",
   "running_step": "Schritt 3 von 6",

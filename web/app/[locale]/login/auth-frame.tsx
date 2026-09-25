@@ -28,7 +28,7 @@ export function AuthFrame({
         <div className="w-full max-w-[420px]">
           <div className="flex flex-wrap items-baseline gap-[10px]">
             <div className="text-od-text text-[20px] font-semibold tracking-[-0.01em]">
-              Tel-Agent
+              Opulentus
             </div>
             <span className="mono ltr-data text-od-faint-2 text-[12px]">{INSTALLATION.version}</span>
           </div>

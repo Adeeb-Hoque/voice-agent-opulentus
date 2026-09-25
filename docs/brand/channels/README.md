@@ -93,7 +93,7 @@ rewritten to drop Slack from the integrations list and to state the case it pass
 not.
 
 **Analog — resolved.** An earlier draft of `landline.svg` drew a rotary phone, which
-sat badly against "Not analog-capable ... Tel-Agent only speaks SIP". The supplied
+sat badly against "Not analog-capable ... Opulentus only speaks SIP". The supplied
 artwork is a modern office desk phone, which is what a SIP handset actually looks
 like, so the conflict is gone.
 
@@ -102,4 +102,4 @@ like, so the conflict is gone.
 WhatsApp, Telegram, Messenger, Instagram, Discord, Slack, Microsoft Teams, Signal,
 Viber, Google Chat, Mattermost, Matrix, LINE, WeChat, WeCom, QQ, DingTalk, Feishu,
 Lark and iMessage are trademarks of their respective owners. They appear here to name the channel a user would reach us on -
-nominative use - and imply no endorsement of, or affiliation with, Tel-Agent.
+nominative use - and imply no endorsement of, or affiliation with, Opulentus.

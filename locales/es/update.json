@@ -12,7 +12,7 @@
   "verdict_security_body": "Una petición sin autenticar podía leer transcripciones de llamadas si la interfaz está expuesta a internet. Si la tuya solo está en la red del negocio no corres riesgo hoy, pero instálala esta semana de todos modos.",
   "verdict_security_meta": "publicada hace 2 días",
   "verdict_current_title": "Estás en la versión actual",
-  "verdict_current_body": "Nada que hacer. Tel-Agent comprueba cada noche y te escribe solo cuando hay algo que valga la pena instalar.",
+  "verdict_current_body": "Nada que hacer. Opulentus comprueba cada noche y te escribe solo cuando hay algo que valga la pena instalar.",
   "verdict_current_meta": "comprobado hace 1 h",
   "running_title": "Actualizando a {version}",
   "running_step": "paso 3 de 6",

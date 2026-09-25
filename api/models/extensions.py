@@ -19,7 +19,7 @@ from api.models.common import enum_column, utc_now_column, workspace_fk
 # The four origins the `apps` catalogue already distinguishes.
 #
 # `mcp` is not a kind of package: those entries have no code of their own at all. The
-# customer points Tel-Agent at an MCP server and its tools become callable, which is
+# customer points Opulentus at an MCP server and its tools become callable, which is
 # why the column is `origin` rather than `source` — it says where the behaviour comes
 # from, not where a file was downloaded from.
 ORIGINS = ("official", "community", "planned", "mcp")

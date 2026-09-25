@@ -46,13 +46,13 @@ logger = logging.getLogger("api.webhooks")
 
 # The receiver reads these. Named rather than inlined so the documented verification
 # recipe and the sender cannot drift apart.
-EVENT_HEADER = "X-Tel-Agent-Event"
-TIMESTAMP_HEADER = "X-Tel-Agent-Timestamp"
-SIGNATURE_HEADER = "X-Tel-Agent-Signature"
+EVENT_HEADER = "X-Opulentus-Event"
+TIMESTAMP_HEADER = "X-Opulentus-Timestamp"
+SIGNATURE_HEADER = "X-Opulentus-Signature"
 # The job's id. A receiver that acts on a delivery keeps this and ignores a repeat:
 # retries mean the same event can arrive twice, and "at least once" is the only
 # promise a sender that retries can honestly make.
-DELIVERY_HEADER = "X-Tel-Agent-Delivery"
+DELIVERY_HEADER = "X-Opulentus-Delivery"
 
 # Prefixed with the algorithm so that adding a second one later is a new prefix rather
 # than a guess about which of two hashes a hex string is.

@@ -1,4 +1,4 @@
-# Tel-Agent — Design Brief
+# Opulentus — Design Brief
 
 **Read `docs/SPEC.md` Part A before starting.** This brief does not replace it; it
 turns §A into an ordered piece of work with a defined deliverable.

@@ -5,8 +5,8 @@ a 62×24 grid, 24 px slots on a 38 px pitch, the same geometry as
 [`../models/`](../models/).
 
 This row means something different from the models row. The models strip names what
-Tel-Agent can be *pointed at*; this one names the coding agents the repository is set
-up to be *worked on by*. Mixing the two would tell a reader that Tel-Agent answers
+Opulentus can be *pointed at*; this one names the coding agents the repository is set
+up to be *worked on by*. Mixing the two would tell a reader that Opulentus answers
 phone calls with an IDE.
 
 | File | Ink | For |

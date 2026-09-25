@@ -2,7 +2,7 @@
 
 Telegram comes first because it is the one platform channel with no review queue: a
 customer makes a bot with @BotFather, pastes the token, and the channel is live. The
-token is theirs, stored encrypted on their channel row (§B9.2) — Tel-Agent never holds
+token is theirs, stored encrypted on their channel row (§B9.2) — Opulentus never holds
 a shared platform application.
 
 **Long polling, not webhooks, and that is a deployment decision.** A Telegram webhook

@@ -292,7 +292,7 @@ export function Connectors({ locale, t }: { locale: Locale; t: ConnectorsDiction
                     })}
                   </div>
 
-                  {/* Tel-Agent does not vouch for third-party servers, and says so. */}
+                  {/* Opulentus does not vouch for third-party servers, and says so. */}
                   <div className="border-od-amber-border bg-od-amber-bg flex flex-wrap items-start gap-x-[18px] gap-y-3 rounded-[10px] border p-[15px_16px]">
                     <span className="flex-none font-semibold text-[color:var(--od-amber)]">!</span>
                     <div className="min-w-0 flex-[1_1_320px] text-[12.5px] text-pretty text-[color:var(--od-amber-text-3)]">

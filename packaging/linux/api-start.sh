@@ -5,6 +5,6 @@
 # 500 hunt. The bundled interpreter is used by module, never via installed
 # script shebangs - those bake in build-time paths.
 set -eu
-cd /opt/tel-agent
-/opt/tel-agent/python/bin/python3 -m alembic upgrade head
-exec /opt/tel-agent/python/bin/python3 -m api
+cd /opt/opulentus
+/opt/opulentus/python/bin/python3 -m alembic upgrade head
+exec /opt/opulentus/python/bin/python3 -m api

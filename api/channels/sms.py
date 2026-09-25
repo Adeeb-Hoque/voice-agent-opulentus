@@ -2,7 +2,7 @@
 
 The first channel built on the declarative contract (D-044): no routes of its own, a
 `Setup` beside the transport, and the generic card and door serving both. The customer
-pastes the credentials of **their own** messaging account; Tel-Agent holds no shared
+pastes the credentials of **their own** messaging account; Opulentus holds no shared
 application here any more than it does anywhere else.
 
 **Inbound is a door.** The platform posts a form body to `/public/sms/{webhook_path}`

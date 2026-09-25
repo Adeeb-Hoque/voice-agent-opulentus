@@ -23,6 +23,6 @@
   "offline_retry": "Reintentar",
   "error_label": "No se pudo cargar el calendario",
   "error_title": "El servidor de calendario rechazó las credenciales",
-  "error_body": "Tel-Agent llegó al servidor CalDAV pero fue rechazado al iniciar sesión — lo más probable es que la contraseña de aplicación fuera revocada o caducara. Hasta que se reemplace, el agente ofrece tomar un mensaje en lugar de proponer horas.",
+  "error_body": "Opulentus llegó al servidor CalDAV pero fue rechazado al iniciar sesión — lo más probable es que la contraseña de aplicación fuera revocada o caducara. Hasta que se reemplace, el agente ofrece tomar un mensaje en lugar de proponer horas.",
   "error_update": "Actualizar credenciales"
 }

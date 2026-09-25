@@ -2,31 +2,31 @@
 #   VERSION=x.y.z ARCH=amd64 STAGE=/tmp/stage nfpm package -f packaging/linux/nfpm.yaml -p deb
 # The staged tree comes from packaging/linux/build-tree.sh.
 
-name: tel-agent
+name: opulentus
 arch: ${ARCH}
 platform: linux
 version: ${VERSION}
 section: net
 priority: optional
-maintainer: Dpro GmbH <office@dpro.at>
+maintainer: Opulentus
 description: |
   Self-hosted AI agent that answers your business's phone and messages.
   Ships its own Python and Node runtimes; everything runs locally under
-  /opt/tel-agent with data in /var/lib/tel-agent.
-vendor: Dpro GmbH
-homepage: https://tel-agent.com
+  /opt/opulentus with data in /var/lib/opulentus.
+vendor: Opulentus
+homepage: https://github.com/Adeeb-Hoque/opulentus
 license: AGPL-3.0
 
 contents:
-  - src: ${STAGE}/opt/tel-agent
-    dst: /opt/tel-agent
-  - src: ${STAGE}/usr/lib/systemd/system/tel-agent-api.service
-    dst: /usr/lib/systemd/system/tel-agent-api.service
-  - src: ${STAGE}/usr/lib/systemd/system/tel-agent-web.service
-    dst: /usr/lib/systemd/system/tel-agent-web.service
+  - src: ${STAGE}/opt/opulentus
+    dst: /opt/opulentus
+  - src: ${STAGE}/usr/lib/systemd/system/opulentus-api.service
+    dst: /usr/lib/systemd/system/opulentus-api.service
+  - src: ${STAGE}/usr/lib/systemd/system/opulentus-web.service
+    dst: /usr/lib/systemd/system/opulentus-web.service
   # The operator's config: never overwritten on upgrade.
-  - src: ${STAGE}/etc/tel-agent/tel-agent.env
-    dst: /etc/tel-agent/tel-agent.env
+  - src: ${STAGE}/etc/opulentus/opulentus.env
+    dst: /etc/opulentus/opulentus.env
     type: config|noreplace
 
 scripts:

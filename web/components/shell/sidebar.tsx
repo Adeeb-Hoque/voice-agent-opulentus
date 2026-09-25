@@ -300,7 +300,7 @@ export function Sidebar({
             <span className="od-rail-narrow border-od-border-2 bg-od-panel size-[26px] items-center justify-center rounded-[7px] border text-[12px] font-semibold">
               T
             </span>
-            <span className="od-rail-wide font-semibold tracking-[-0.01em]">Tel-Agent</span>
+            <span className="od-rail-wide font-semibold tracking-[-0.01em]">Opulentus</span>
             <span className="mono ltr-data text-od-faint od-rail-wide text-[11px]">v1.4.2</span>
           </Link>
           <div className="od-rail-wide flex flex-none items-center gap-[6px]">

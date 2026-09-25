@@ -1,4 +1,4 @@
-# Contributing to Tel-Agent
+# Contributing to Opulentus
 
 Thank you for looking at this. Please read the first section before opening a pull
 request — it will save you time.
@@ -12,7 +12,7 @@ larger. Come back to this page afterwards.
 
 ## Read this first: the project is pre-alpha
 
-Tel-Agent is at **Milestone 0**: getting a single conversation answered end to end in
+Opulentus is at **Milestone 0**: getting a single conversation answered end to end in
 a web chat, with the message captured and the transcript printed. There is no
 installable release, no dashboard, and no database yet. The phone comes last, at
 Milestone 11 — see [`docs/ROADMAP.md`](docs/ROADMAP.md) for why.
@@ -39,10 +39,10 @@ specification, and anything that helps Milestone 0 work.
 
 Work comes from the public board and nowhere else:
 
-**https://github.com/orgs/Dpro-at/projects/6**
+**https://github.com/Adeeb-Hoque/opulentus/projects**
 
 ```bash
-gh issue list --repo Dpro-at/Tel-Agent --label "good first issue" --state open
+gh issue list --repo Adeeb-Hoque/opulentus --label "good first issue" --state open
 ```
 
 **Take from the `Ready` column only.** `Backlog` means the issue is blocked on another
@@ -78,23 +78,6 @@ past the issue. Both are on you, not on the reviewer.
 
 ---
 
-## The Contributor License Agreement
-
-**Every contributor must accept the [CLA](CLA.md) before their first pull request is
-merged.** No exceptions, including for one-line fixes.
-
-You keep full ownership and copyright of your work. The CLA grants Dpro GmbH a licence
-to use and relicense it, which is what allows Tel-Agent to be released under AGPL-3.0
-while a hosted edition and a commercial licence exist alongside it.
-
-To accept, add this line to your pull request description:
-
-```
-I have read the CLA document and I hereby sign the CLA.
-```
-
----
-
 ## Everything in this repository is English
 
 **All code, comments, docstrings, identifiers, commit messages and documentation are
@@ -109,8 +92,8 @@ translated into `en`, `de` and `ar`. Translations are very welcome.
 ## Development setup
 
 ```bash
-git clone https://github.com/Dpro-at/Tel-Agent.git
-cd Tel-Agent
+git clone https://github.com/Adeeb-Hoque/opulentus.git
+cd Opulentus
 cp .env.example .env    # fill in your own keys
 ```
 
@@ -154,7 +137,7 @@ does, because D-029 supports two dialects and full-text search is implemented
 differently on each.
 
 ```bash
-TEST_POSTGRES_URL=postgresql+asyncpg://user:pass@localhost:5432/telagent_test pytest
+TEST_POSTGRES_URL=postgresql+asyncpg://user:pass@localhost:5432/opulentus_test pytest
 ```
 
 No PostgreSQL on the machine? `docker-compose.dev.yml` starts a throwaway one with
@@ -162,7 +145,7 @@ matching credentials:
 
 ```bash
 docker compose -f docker-compose.dev.yml up -d
-TEST_POSTGRES_URL=postgresql+asyncpg://telagent:telagent@localhost:5432/telagent_test pytest
+TEST_POSTGRES_URL=postgresql+asyncpg://opulentus:opulentus@localhost:5432/opulentus_test pytest
 ```
 
 Without it you get the SQLite half and no failure. With it you get both.

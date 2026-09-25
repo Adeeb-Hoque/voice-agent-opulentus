@@ -21,7 +21,7 @@
   "release_confirm": "Liberar este número",
   "release_cancel": "Mantenerlo",
   "empty_title": "Aún no hay números",
-  "empty_body": "Añade el número que compraste a tu proveedor y aparecerá aquí. El contrato sigue siendo tuyo — Tel-Agent solo guarda el registro.",
+  "empty_body": "Añade el número que compraste a tu proveedor y aparecerá aquí. El contrato sigue siendo tuyo — Opulentus solo guarda el registro.",
   "error_invalid_e164": "Un número se escribe como +, código de país y dígitos — por ejemplo +43 720 123456.",
   "error_number_taken": "Este espacio de trabajo ya tiene ese número.",
   "error_platform_number": "Este número pertenece a la plataforma y no puede liberarse aquí.",

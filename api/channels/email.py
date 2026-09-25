@@ -4,7 +4,7 @@ An IMAP/SMTP mailbox the customer already owns: no developer account, no review
 queue, nothing to be approved by. The mailbox credentials are the channel's own —
 per workspace, entered on the Channels card, the password in the encrypted column —
 and they are **not** the installation's notification SMTP from the settings store:
-that one is how Tel-Agent talks to its operator, this one is how a business talks to
+that one is how Opulentus talks to its operator, this one is how a business talks to
 its customers, and §B9.2's whole point is that those are different credentials with
 different owners.
 

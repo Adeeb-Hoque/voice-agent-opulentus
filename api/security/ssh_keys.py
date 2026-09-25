@@ -3,7 +3,7 @@
 The flow the `login/key` screen describes, unchanged: the server mints a challenge valid
 two minutes and usable once, the holder signs it on their own machine with
 
-    ssh-keygen -Y sign -f ~/.ssh/id_ed25519 -n tel-agent
+    ssh-keygen -Y sign -f ~/.ssh/id_ed25519 -n opulentus
 
 and only the signature comes back. No private key ever leaves their machine, and no
 password is typed — which is the point on a box where the administrator may never have
@@ -36,8 +36,8 @@ logger = logging.getLogger("api.auth")
 
 # The namespace passed to `ssh-keygen -n`. It scopes a signature to this application:
 # a signature made for another namespace does not verify here, so a signature the
-# holder produced for some other tool cannot be replayed against Tel-Agent.
-NAMESPACE = "tel-agent"
+# holder produced for some other tool cannot be replayed against Opulentus.
+NAMESPACE = "opulentus"
 
 CHALLENGE_LIFETIME = dt.timedelta(minutes=2)
 CHALLENGE_PREFIX = "ta1-"
@@ -118,7 +118,7 @@ def verify_signature(*, message: str, signature: str, public_key: str) -> bool:
     if len(signature.encode("utf-8")) > MAX_SIGNATURE_BYTES:
         return False
 
-    with tempfile.TemporaryDirectory(prefix="telagent-sshsig-") as directory:
+    with tempfile.TemporaryDirectory(prefix="opulentus-sshsig-") as directory:
         root = Path(directory)
         signature_file = root / "signature"
         allowed = root / "allowed_signers"
@@ -126,7 +126,7 @@ def verify_signature(*, message: str, signature: str, public_key: str) -> bool:
         signature_file.write_text(signature, encoding="utf-8")
         # `ssh-keygen -Y verify` checks a signature against an identity in this file.
         # The identity is arbitrary; it only has to match the `-I` argument below.
-        allowed.write_text(f"telagent {public_key.strip()}\n", encoding="utf-8")
+        allowed.write_text(f"opulentus {public_key.strip()}\n", encoding="utf-8")
 
         try:
             result = subprocess.run(  # noqa: S603 - fixed argv, no shell
@@ -137,7 +137,7 @@ def verify_signature(*, message: str, signature: str, public_key: str) -> bool:
                     "-f",
                     str(allowed),
                     "-I",
-                    "telagent",
+                    "opulentus",
                     "-n",
                     NAMESPACE,
                     "-s",

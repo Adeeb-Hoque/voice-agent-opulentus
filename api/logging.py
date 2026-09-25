@@ -24,10 +24,10 @@ from api.syslog import RecentLogHandler
 
 # Identifies the handler this module installs, so that reconfiguring replaces it rather
 # than removing every handler anybody else attached.
-_HANDLER_NAME = "telagent.json"
+_HANDLER_NAME = "opulentus.json"
 # The in-memory ring the health screen reads. Named like the JSON handler so
 # `configure_logging` can replace its own without touching anybody else's.
-_RECENT_HANDLER_NAME = "telagent.recent"
+_RECENT_HANDLER_NAME = "opulentus.recent"
 
 # Set by the request-id middleware, read by the log filter. A ContextVar rather than a
 # global because concurrent requests share the process: a global would let one request's

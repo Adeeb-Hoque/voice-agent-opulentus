@@ -1,20 +1,20 @@
 name: Feature request
-description: Propose something Tel-Agent does not do yet
+description: Propose something Opulentus does not do yet
 labels: ["enhancement"]
 body:
   - type: markdown
     attributes:
       value: |
-        Tel-Agent is at **Milestone 0** — web chat answered end to end, streaming,
+        Opulentus is at **Milestone 0** — web chat answered end to end, streaming,
         cancellable. The phone is Milestone 11. Work outside that order is parked
-        in [IDEAS.md](https://github.com/Dpro-at/Tel-Agent/blob/main/IDEAS.md)
+        in [IDEAS.md](https://github.com/Adeeb-Hoque/opulentus/blob/main/IDEAS.md)
         rather than built.
 
         Use this form to describe the idea clearly. If it is beyond the current
         milestone, expect it to be recorded in `IDEAS.md` instead of scheduled.
 
         **Never include an API key, a SIP password, a real recording, or a real
-        transcript.** Security problem? See [SECURITY.md](https://github.com/Dpro-at/Tel-Agent/blob/main/SECURITY.md).
+        transcript.** Security problem? See [SECURITY.md](https://github.com/Adeeb-Hoque/opulentus/blob/main/SECURITY.md).
 
   - type: textarea
     id: problem
@@ -27,7 +27,7 @@ body:
   - type: textarea
     id: proposal
     attributes:
-      label: What should Tel-Agent do?
+      label: What should Opulentus do?
       description: The behaviour you want. Prefer outcomes over implementation.
     validations:
       required: true

@@ -34,7 +34,7 @@ SECURITY_SCHEMES: dict[str, dict[str, Any]] = {
     "session": {
         "type": "apiKey",
         "in": "cookie",
-        "name": "telagent_session",
+        "name": "opulentus_session",
         "description": (
             "The dashboard's session. Created by `POST /api/auth/login`, stored as an "
             "HttpOnly cookie, and revoked by signing out. It opens the `/api/…` routes "

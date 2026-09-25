@@ -275,7 +275,7 @@ TAGS_METADATA = [
         "description": (
             "Where this installation posts what happened, and the secret that signs it. "
             "Rule 5 in `CLAUDE.md` is why this matters more than its size suggests: "
-            "everything outside Tel-Agent's column is reached through here."
+            "everything outside Opulentus's column is reached through here."
         ),
     },
     {
@@ -323,7 +323,7 @@ TAGS_METADATA = [
 ]
 
 DESCRIPTION = """
-The REST and WebSocket API for Tel-Agent — an AI agent that answers the phone and the
+The REST and WebSocket API for Opulentus — an AI agent that answers the phone and the
 messaging channels a customer reaches a business on.
 
 The dashboard consumes this same API, so it exists anyway; it is simply public and
@@ -470,14 +470,14 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     configure_logging(settings.log_level)
 
     app = FastAPI(
-        title="Tel-Agent",
+        title="Opulentus",
         description=DESCRIPTION,
         version=settings.version,
         license_info={
             "name": "AGPL-3.0-or-later",
             "url": "https://www.gnu.org/licenses/agpl-3.0.html",
         },
-        contact={"name": "Tel-Agent", "url": "https://github.com/Dpro-at/Tel-Agent"},
+        contact={"name": "Opulentus"},
         openapi_tags=TAGS_METADATA,
         lifespan=lifespan,
         # Documented once, on every route, rather than repeated per endpoint. Screens

@@ -59,7 +59,7 @@ async def _channel(db: DbSession, path: str) -> Channel | None:
 async def embed_script(request: Request) -> Response:
     """The one line a customer pastes, and everything it does.
 
-    It reads its own `data-tel-agent`, builds an iframe at this installation, and sizes
+    It reads its own `data-opulentus`, builds an iframe at this installation, and sizes
     it. Nothing else: no analytics, no cookies, no reading of the host page. A script on
     somebody else's site is a liability they took on trust, and the way to deserve that
     is to do the minimum in public view.
@@ -71,7 +71,7 @@ async def embed_script(request: Request) -> Response:
     javascript = f"""(function () {{
   var tag = document.currentScript;
   if (!tag) return;
-  var path = tag.getAttribute("data-tel-agent");
+  var path = tag.getAttribute("data-opulentus");
   if (!path) return;
 
   var frame = document.createElement("iframe");
@@ -93,7 +93,7 @@ async def embed_script(request: Request) -> Response:
   // message accepted, and only from the frame that was just created.
   window.addEventListener("message", function (event) {{
     if (event.source !== frame.contentWindow) return;
-    if (!event.data || event.data.telAgent !== "resize") return;
+    if (!event.data || event.data.opulentus !== "resize") return;
     var open = event.data.open === true;
     frame.style.width = open ? "{_OPEN_WIDTH}" : "{_CLOSED}";
     frame.style.height = open ? "{_OPEN_HEIGHT}" : "{_CLOSED}";
@@ -268,7 +268,7 @@ def _page(path: str, language: str) -> str:
   // things that are no longer on the screen. The handle is kept per channel, and in
   // this iframe's own storage - the page embedding the widget cannot read it, which
   // is the same wall the iframe exists for.
-  var HANDLE_KEY = "tel-agent:chat:" + PATH;
+  var HANDLE_KEY = "opulentus:chat:" + PATH;
   var conversation = null;
   try {{
     conversation = localStorage.getItem(HANDLE_KEY) || null;
@@ -292,7 +292,7 @@ def _page(path: str, language: str) -> str:
   }}
 
   function resize(open) {{
-    parent.postMessage({{ telAgent: "resize", open: open }}, "*");
+    parent.postMessage({{ opulentus: "resize", open: open }}, "*");
   }}
   function show(open) {{
     panel.classList.toggle("open", open);

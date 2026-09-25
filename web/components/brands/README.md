@@ -40,7 +40,7 @@ noted below — swap the hard-coded fill for `currentColor`.
 
 ## Why the files are here and not on a CDN
 
-Tel-Agent runs on the customer's own machine. An icon loaded from
+Opulentus runs on the customer's own machine. An icon loaded from
 `https://cdn…` breaks on an installation with no internet access and leaks one request
 per view to a third party. Everything the interface draws ships with the interface.
 

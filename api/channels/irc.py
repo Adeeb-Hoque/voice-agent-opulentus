@@ -258,7 +258,7 @@ async def open_session(credentials: dict[str, str], *, nick: str | None = None) 
         if credentials.get("password"):
             await session.send(f"PASS {credentials['password']}")
         await session.send(f"NICK {wanted}")
-        await session.send(f"USER {wanted} 0 * :Tel-Agent")
+        await session.send(f"USER {wanted} 0 * :Opulentus")
         await session.send("CAP END")
         attempt = wanted
         async with asyncio.timeout(REGISTER_SECONDS):

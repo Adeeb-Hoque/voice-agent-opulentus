@@ -56,7 +56,7 @@ These are already described in `docs/SPEC.md` and scheduled, just not now.
 
 ## Distribution
 
-- **n8n community node for Tel-Agent** — one of the strongest distribution channels
+- **n8n community node for Opulentus** — one of the strongest distribution channels
   available; a large community actively looks for new nodes.
 - **A 30-second video of a real call** — carries more weight than any README section.
 - **Launches on Hacker News and r/selfhosted** — an excellent project nobody finds is
@@ -67,7 +67,7 @@ These are already described in `docs/SPEC.md` and scheduled, just not now.
 
 ## Open questions
 
-- **Trademark position on "Tel-Agent"** (EUIPO classes 9 and 42). An older academic
+- **Trademark position on "Opulentus"** (EUIPO classes 9 and 42). An older academic
   dialogue-systems framework shares the name. Confirm before committing to a logo.
   *Not legal advice.*
 - ~~**How SIP is handled in Milestone 0**~~ — **answered 2026-08-17: LiveKit Cloud
@@ -93,8 +93,8 @@ like any other with the word "local" for a key. What is still parked: choosing a
 by the machine's memory automatically (the number is shown, the choice is the
 operator's), and runtimes that cannot download on request.
 
-**2026-08-17 — Selling numbers to customers (Tel-Agent Cloud only).**
-Dpro GmbH holds numbers at Twilio and assigns them to customers, who then forward
+**2026-08-17 — Selling numbers to customers (Opulentus Cloud only).**
+Opulentus holds numbers at Twilio and assigns them to customers, who then forward
 their existing line to the assigned number on no-answer after a set number of seconds.
 Onboarding collapses to one button instead of a provider account, a document upload
 and a trunk configuration.
@@ -144,10 +144,10 @@ a LAN has no such address, so the setup story becomes "get a public IP, open por
 obtain a domain, configure TLS" — which ends most non-technical installations before
 they begin.
 
-The relay collapses that to nothing. Tel-Agent runs relay servers in a few regions;
+The relay collapses that to nothing. Opulentus runs relay servers in a few regions;
 the installation opens an **outbound** tunnel to the nearest one (no port forwarding,
 no static IP at the customer's end) and receives a stable public address such as
-`name.tel-agent.com`. That one URL then serves as:
+`name.<your-domain>`. That one URL then serves as:
 
 1. the **webhook endpoint** the messaging platforms deliver to,
 2. the **public chat page and embed widget** address,
@@ -182,7 +182,7 @@ open edition stays trustworthy:
   unasked forfeits exactly the trust self-hosting exists to provide.
 - **The own-address path is first-class**, on the same screen, never buried. Making
   our path easy must never make the user's own path harder.
-- **The relay server itself is a hosted service run by Tel-Agent Cloud** and, like
+- **The relay server itself is a hosted service run by Opulentus Cloud** and, like
   number reselling above, never enters the open edition. What lands in this
   repository is the client half: the tunnel the installation opens, pointed at
   whatever the user configures.
@@ -192,7 +192,7 @@ Milestone 3 (messaging channels) at the earliest. The commercial side is recorde
 in `internal/DECISIONS.md` (D-033).
 
 **2026-08-20 — Redraw the logo as clean vector, and draw a 16 px icon.**
-Everything in `docs/brand/tel-agent-logo/` is traced from raster artwork, not drawn.
+Everything in `docs/brand/opulentus-logo/` is traced from raster artwork, not drawn.
 It renders correctly and scales, but the full-colour marks are ~200 colour-band
 paths each, so they cannot be recoloured or edited.
 

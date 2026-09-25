@@ -377,7 +377,7 @@ def _initialize(params: dict[str, Any]) -> dict[str, Any]:
     return {
         "protocolVersion": asked if asked in KNOWN_VERSIONS else PROTOCOL_VERSION,
         "capabilities": {"tools": {}},
-        "serverInfo": {"name": "Tel-Agent", "version": get_settings().version},
+        "serverInfo": {"name": "Opulentus", "version": get_settings().version},
     }
 
 

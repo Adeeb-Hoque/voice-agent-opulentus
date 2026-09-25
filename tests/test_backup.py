@@ -139,7 +139,7 @@ async def test_verification_reads_the_whole_archive_back(
 
     manifest = archive.verify(destination, archive.checksum(destination))
 
-    assert manifest["product"] == "tel-agent"
+    assert manifest["product"] == "opulentus"
 
 
 async def test_a_corrupted_archive_is_caught_by_verification(
@@ -208,7 +208,7 @@ async def test_an_archive_from_a_newer_format_is_refused(
 ) -> None:
     """Guessing at a layout this code has never seen is how a restore lands half-done."""
     destination = tmp_path / "future.tar.gz"
-    manifest = {"product": "tel-agent", "format_version": archive.FORMAT_VERSION + 1}
+    manifest = {"product": "opulentus", "format_version": archive.FORMAT_VERSION + 1}
     with tarfile.open(destination, "w:gz") as tar:
         payload = tmp_path / archive.MANIFEST_NAME
         payload.write_text(json.dumps(manifest))
@@ -528,7 +528,7 @@ def _restore_module():
 
     root = Path(__file__).resolve().parents[1]
     spec = importlib.util.spec_from_file_location(
-        "telagent_restore", root / "scripts" / "restore.py"
+        "opulentus_restore", root / "scripts" / "restore.py"
     )
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)

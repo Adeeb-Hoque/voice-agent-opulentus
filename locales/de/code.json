@@ -12,7 +12,7 @@
   "resend_prompt_expired": "Es gibt nichts mehr abzuwarten",
   "back": "Zurück zur Anmeldung",
   "self_hosted": "Selbst gehostet · nichts verlässt diesen Rechner",
-  "offline_title": "Dieser Browser erreicht Ihren Tel-Agent-Server nicht",
+  "offline_title": "Dieser Browser erreicht Ihren Opulentus-Server nicht",
   "offline_body": "Keine Antwort von {host}. Ihre Anrufe sind nicht betroffen, solange die Maschine läuft — das ist ein Netzwerkproblem zwischen Ihnen und ihr. Prüfen Sie, ob Sie im Firmennetz oder mit dem VPN verbunden sind.",
   "offline_retry": "Verbindung erneut versuchen"
 }

@@ -7,7 +7,7 @@ proves the link rather than claiming it — both links here, because a mailbox t
 receives but cannot send is an agent that reads customers' mail and never answers.
 
 **This mailbox is not the installation's notification SMTP.** The settings store's
-`smtp.*` keys are how Tel-Agent talks to its operator; this card is how a business
+`smtp.*` keys are how Opulentus talks to its operator; this card is how a business
 talks to its customers, per workspace, on credentials the customer owns (§B9.2).
 """
 

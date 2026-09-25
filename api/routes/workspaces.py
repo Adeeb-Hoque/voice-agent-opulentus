@@ -336,9 +336,9 @@ async def _issue_invite(
             "send_email",
             {
                 "to": email,
-                "subject": f"You are invited to {workspace_name} on Tel-Agent",
+                "subject": f"You are invited to {workspace_name} on Opulentus",
                 "body": (
-                    f"You have been invited to join {workspace_name} on a Tel-Agent "
+                    f"You have been invited to join {workspace_name} on an Opulentus "
                     f"installation.\n\nOpen this link to choose your username and "
                     f"password:\n\n{base}/invite/{token}\n\nThe link works once and "
                     f"expires in seven days."

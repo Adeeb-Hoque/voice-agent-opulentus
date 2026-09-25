@@ -23,7 +23,7 @@ type ShellDictionary = typeof en;
 /**
  * The description is the one piece of shell copy a reader can meet before the page
  * itself - in a search result or a shared link - so it is translated like the rest.
- * "Tel-Agent" is the product name and reads the same in every locale.
+ * "Opulentus" is the product name and reads the same in every locale.
  */
 export async function generateMetadata({
   params,
@@ -39,7 +39,7 @@ export async function generateMetadata({
     nl,
   });
 
-  return { title: "Tel-Agent", description: t.meta_description };
+  return { title: "Opulentus", description: t.meta_description };
 }
 
 /**

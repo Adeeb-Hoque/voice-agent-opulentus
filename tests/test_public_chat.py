@@ -228,7 +228,7 @@ async def test_an_address_that_is_not_a_widget_answers_like_one_that_is_refused(
         json={"text": "hello"},
         headers={"Origin": ALLOWED},
     )
-    # Not 404. "Does this business run Tel-Agent" is not a question this endpoint
+    # Not 404. "Does this business run Opulentus" is not a question this endpoint
     # answers, and a different status for a missing channel answers it.
     assert answer.status_code == 403
     assert answer.json()["error"]["code"] == "origin_not_allowed"

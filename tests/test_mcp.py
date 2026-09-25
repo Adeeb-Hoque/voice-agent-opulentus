@@ -156,7 +156,7 @@ async def test_the_handshake_names_the_server_and_its_tools_capability(stage) ->
     result = answer.json()["result"]
     assert result["protocolVersion"] == "2025-06-18"
     assert "tools" in result["capabilities"]
-    assert result["serverInfo"]["name"] == "Tel-Agent"
+    assert result["serverInfo"]["name"] == "Opulentus"
 
 
 async def test_an_unknown_protocol_version_gets_the_one_we_speak(stage) -> None:

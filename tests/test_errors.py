@@ -22,7 +22,7 @@ from api.middleware.request_id import HEADER
 # connection string appearing in an exception message never reaches the client, and
 # there is no way to assert that without a realistic-looking string to look for.
 # The rule stays on for the rest of the suite; only this line is excused.
-SECRET = "postgresql://admin:hunter2@db.internal/telagent"  # noqa: S105
+SECRET = "postgresql://admin:hunter2@db.internal/opulentus"  # noqa: S105
 
 
 class Payload(BaseModel):

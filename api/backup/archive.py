@@ -1,4 +1,4 @@
-"""What a Tel-Agent archive is, and how one is written and read — P7.
+"""What an Opulentus archive is, and how one is written and read — P7.
 
 **A logical dump, not a physical one.** Every table is walked through SQLAlchemy and
 written as JSON Lines; the archive is a gzipped tar of those files plus a manifest.
@@ -70,7 +70,7 @@ def key_fingerprint(key: bytes) -> str:
     instead of leaving them to discover it when the phone provider rejects the login.
     Hashed, so the manifest never carries anything derived usefully from the key.
     """
-    return hashlib.sha256(b"telagent-key-fingerprint:" + key).hexdigest()[:16]
+    return hashlib.sha256(b"opulentus-key-fingerprint:" + key).hexdigest()[:16]
 
 
 def _encode(value: Any) -> Any:
@@ -189,7 +189,7 @@ async def write_archive(
 
             manifest = {
                 "format_version": FORMAT_VERSION,
-                "product": "tel-agent",
+                "product": "opulentus",
                 "version": version,
                 "kind": kind,
                 "taken_at": taken_at.astimezone(dt.UTC).isoformat(),
@@ -233,10 +233,10 @@ def read_manifest(path: Path) -> dict[str, Any]:
         # raises TarError. Both mean the same thing to whoever pointed a restore at
         # the wrong file, and both must arrive as that sentence rather than as a
         # traceback from inside the standard library.
-        raise ValueError(f"this file is not a readable Tel-Agent archive: {error}") from error
+        raise ValueError(f"this file is not a readable Opulentus archive: {error}") from error
 
-    if manifest.get("product") != "tel-agent":
-        raise ValueError("not a Tel-Agent archive")
+    if manifest.get("product") != "opulentus":
+        raise ValueError("not an Opulentus archive")
     if manifest.get("format_version", 0) > FORMAT_VERSION:
         raise ValueError(
             f"archive format {manifest['format_version']} is newer than this "

@@ -2683,7 +2683,7 @@ function WhatsAppCard({ t }: { t: SettingsDictionary }) {
  * The email card — §B13's third no-platform channel: an IMAP/SMTP mailbox the
  * customer already owns.
  *
- * Deliberately not the notifications tab's SMTP: that one is how Tel-Agent talks to
+ * Deliberately not the notifications tab's SMTP: that one is how Opulentus talks to
  * its operator, this one is how the business talks to its customers, per workspace,
  * on credentials the customer owns (§B9.2). The password follows the cards'
  * contract — masked once saved, the echoed mask never treated as an edit, an empty
@@ -3902,7 +3902,7 @@ function ReadOnlyConfig({ t }: { t: SettingsDictionary }) {
         <h2 className="mt-[18px] mb-0 text-[21px] font-semibold">{t.err_title}</h2>
         <p className="text-od-muted mt-[10px] max-w-[46ch] text-pretty">
           {t.err_body_before}
-          <span className="mono">/config/telagent.yaml</span>
+          <span className="mono">/config/opulentus.yaml</span>
           {t.err_body_after}
         </p>
         <div className="mt-5 flex flex-wrap gap-[10px]">

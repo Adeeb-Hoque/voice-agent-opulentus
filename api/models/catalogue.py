@@ -1,6 +1,6 @@
 """The catalogue — what the business sells, in the words the assistant may use.
 
-§A6.11's first tab. Tel-Agent ships with none of this: an agent that invents a price
+§A6.11's first tab. Opulentus ships with none of this: an agent that invents a price
 is worse than one that says it does not know, so the only prices it can quote are the
 ones somebody typed here.
 

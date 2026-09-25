@@ -1,6 +1,6 @@
 #!/bin/sh
 set -eu
-cd /Library/Tel-Agent
+cd /Library/Opulentus
 if grep -q '^ENCRYPTION_KEY=$' .env; then
   KEY="$(python/bin/python3 -c 'from api.security.crypto import generate_key; print(generate_key())')"
   sed -i '' "s/^ENCRYPTION_KEY=$/ENCRYPTION_KEY=${KEY}/" .env

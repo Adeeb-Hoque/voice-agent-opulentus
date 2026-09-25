@@ -1,10 +1,10 @@
-# Tel-Agent — Complete Build Specification
+# Opulentus — Complete Build Specification
 
 > Open-source gateway that connects any phone line to any AI model.
 > Self-hosted. Bring your own keys. Full control over who gets through.
 
-**Project:** Tel-Agent · `tel-agent.com` · AGPL-3.0 · maintained by Dpro GmbH (Vienna)
-**Hosted edition (later):** Tel-Agent Cloud
+**Project:** Opulentus · AGPL-3.0 · made by Opulentus, built by Adeeb
+**Hosted edition (later):** Opulentus Cloud
 
 This document is the single source of truth for design and implementation.
 Section A is for the designer. Section B is for the developer. Read both.
@@ -153,9 +153,8 @@ Once milestone 0 works:
 ## Repo setup (do this today, takes 20 minutes)
 
 ```
-tel-agent/
+opulentus/
 ├── LICENSE          # AGPL-3.0
-├── CLA.md           # before the first PR — after that it's practically impossible
 ├── README.md        # one-liner, what it is, what it is not, quick start
 ├── IDEAS.md         # everything discussed but not in v1 — parks scope safely
 └── agent/
@@ -182,10 +181,10 @@ These are settled. Do not reopen them without a concrete reason.
 
 | Decision | Choice |
 |---|---|
-| Name | **Tel-Agent** — one name for everything. Hosted edition is "Tel-Agent Cloud". |
-| Domain | `tel-agent.com` |
-| License | AGPL-3.0 + CLA from the first contributor |
-| Copyright holder | Dpro GmbH |
+| Name | **Opulentus** — one name for everything. Hosted edition is "Opulentus Cloud". |
+| Domain | not chosen yet |
+| License | AGPL-3.0 |
+| Made by | Opulentus, built by Adeeb |
 | Separate from | Agent-Player and Flowxtra — own repo, own identity, no shared code without a written arrangement |
 | Backend | Python (agent + FastAPI) |
 | Frontend | Next.js |
@@ -194,13 +193,13 @@ These are settled. Do not reopen them without a concrete reason.
 | Packaging | Docker Compose (manual dev run also documented) |
 | Runs as | Locally installed web app on the LAN — not a desktop app, not SaaS-only |
 | First test bed | A number from a SIP provider, pointed at the agent |
-| Number acquisition | Users bring their own number in v1. Reselling numbers belongs to Tel-Agent Cloud and never enters the open edition — see §B3.1 |
+| Number acquisition | Users bring their own number in v1. Reselling numbers belongs to Opulentus Cloud and never enters the open edition — see §B3.1 |
 | SIP at Milestone 11 | LiveKit Cloud SIP. A first-call decision only; the self-hosted media path returns after |
 | Theme | Dark and light, dark designed first |
 | Languages | Multi-language from day one: en / de / ar, RTL supported |
 | Analog phone lines | Out of scope. Users bridge with an ATA; we only ever speak SIP. |
 | Workflow automation | Out of scope. Webhooks + generic HTTP tool; n8n does the rest. |
-| Messaging channels | In scope at Milestone 3 — web chat, SMS, email, WhatsApp, Telegram, Messenger, Instagram, Discord, Slack, Microsoft Teams, Signal, Viber, Google Chat, Mattermost, Matrix, IRC, LINE, WeChat Official Account, WeCom, QQ Bot, DingTalk, Feishu/Lark, iMessage. Twenty-four with the phone, and Tel-Agent commits to those twenty-four (D-044). **A channel is an extension, so the list is open (D-032);** anything beyond them is community-owned and unsupported. Customer connects their own app credentials (§B13). |
+| Messaging channels | In scope at Milestone 3 — web chat, SMS, email, WhatsApp, Telegram, Messenger, Instagram, Discord, Slack, Microsoft Teams, Signal, Viber, Google Chat, Mattermost, Matrix, IRC, LINE, WeChat Official Account, WeCom, QQ Bot, DingTalk, Feishu/Lark, iMessage. Twenty-four with the phone, and Opulentus commits to those twenty-four (D-044). **A channel is an extension, so the list is open (D-032);** anything beyond them is community-owned and unsupported. Customer connects their own app credentials (§B13). |
 
 ---
 
@@ -208,7 +207,7 @@ These are settled. Do not reopen them without a concrete reason.
 
 A self-hosted service that sits between a phone line and an AI agent.
 
-A call arrives over SIP. Tel-Agent checks the caller against routing rules and either
+A call arrives over SIP. Opulentus checks the caller against routing rules and either
 passes it through to a human, blocks it, or hands it to an AI agent. The agent speaks
 with the caller in real time, can invoke tools (transfer, take a message, check a
 calendar, call any HTTP endpoint), and every call is recorded, transcribed, and
@@ -216,7 +215,7 @@ searchable.
 
 ## Scope boundary — memorize this
 
-| Tel-Agent owns | Tel-Agent does NOT own |
+| Opulentus owns | Opulentus does NOT own |
 |---|---|
 | Telephony / SIP | General workflow automation |
 | Voice pipeline (STT → LLM → TTS) | Integrations with 400 SaaS apps |
@@ -233,7 +232,7 @@ HTTP tool**. n8n and Home Assistant do that job better than we would.
 **Channel or integration — the distinction that keeps this table finite.**
 A **channel** is where the conversation happens: the person is on the other end of it,
 speaking or typing. An **integration** is a system the agent acts *on* during that
-conversation. Tel-Agent owns channels and reaches integrations through the HTTP tool.
+conversation. Opulentus owns channels and reaches integrations through the HTTP tool.
 Twenty-four channels are in scope, and the official list is decided rather than open
 (§B13). Integrations are unbounded by nature, which is why they are somebody else's
 product.
@@ -348,7 +347,7 @@ Two clearly separated paths, side by side. Do not bury either:
 Both end at the same place. Neither is presented as the advanced one.
 
 **Buying a number inside the app comes later** (§B3.1), and buying it *from us* is
-Tel-Agent Cloud only. Until then this step must be honest about what it needs: an
+Opulentus Cloud only. Until then this step must be honest about what it needs: an
 account with a provider, and in the EU a regulatory bundle that can take days to
 clear. Say so here rather than letting the user discover it after starting.
 
@@ -517,7 +516,7 @@ Our value is in routing, rules, archive, and tools — not in reinventing the au
 ## B2. Repository layout
 
 ```
-tel-agent/
+opulentus/
 ├── agent/                  # Python — SIP, voice pipeline, agent loop, tools
 │   ├── providers/          # stt/, llm/, tts/ — one interface, many implementations
 │   ├── tools/              # built-in tool implementations
@@ -530,7 +529,6 @@ tel-agent/
 │   └── workflows/          # importable n8n JSON examples
 ├── docker-compose.yml
 ├── docker-compose.dev.yml
-├── CLA.md
 ├── LICENSE                 # AGPL-3.0
 ├── IDEAS.md                # parking lot — keeps scope out of v1
 └── README.md
@@ -578,7 +576,7 @@ Four implementations, in this order:
 | **Bring your own number** | v1 | The user's own account at Twilio, Telnyx or similar. Their keys, their number, their bill. The only path in v1. |
 | **Bring your own SIP / PBX** | v1 | An extension or trunk on 3CX, Asterisk or FreePBX. The better story for a business that already runs a PBX, and the reason the on-premises media path matters. |
 | **Buy in-app** | later | Provisioning through the user's own provider credentials, from inside the UI. Convenience over the first row, not a different relationship. |
-| **Resold by Tel-Agent Cloud** | Tel-Agent Cloud only | Numbers held by Dpro GmbH and assigned to customers. **This implementation does not ship in the open edition.** |
+| **Resold by Opulentus Cloud** | Opulentus Cloud only | Numbers held by Opulentus and assigned to customers. **This implementation does not ship in the open edition.** |
 
 ### Why reselling stays out of the open edition
 
@@ -602,7 +600,7 @@ Revenue comes from the subscription and the per-minute AI.
 ### What the open edition may know
 
 A generic `TwilioProvider` or `TelnyxProvider` into which the user pastes **their own**
-credentials. Nothing referencing a Dpro-held account, no billing logic, no subaccount
+credentials. Nothing referencing a Opulentus-held account, no billing logic, no subaccount
 orchestration. `numbers.provider_account_ref` exists so the hosted edition can map a
 row to a provider subaccount; in a self-hosted installation it simply stays null.
 
@@ -694,7 +692,7 @@ live view. That is the entire reason for the split.
    the data was all there and the feature was not.
 3. **`numbers.owner`** — is the customer the holder of record for this number, or is
    the platform? This is the column that separates a self-hoster's own Twilio number
-   from a number resold by Tel-Agent Cloud, and it governs who may release or port it.
+   from a number resold by Opulentus Cloud, and it governs who may release or port it.
    Backfilling it once both kinds exist means guessing.
 4. **`calls.billable_seconds` and `calls.provider_cost_micros`** — usage metering from
    the first stored call. Two columns today; without them, any later per-minute pricing
@@ -796,10 +794,10 @@ Every delivery carries four headers:
 
 | Header | |
 |---|---|
-| `X-Tel-Agent-Event` | the event name |
-| `X-Tel-Agent-Timestamp` | unix seconds, and part of what is signed |
-| `X-Tel-Agent-Signature` | `sha256=` followed by the hex HMAC |
-| `X-Tel-Agent-Delivery` | the delivery's id — **keep it and ignore repeats** |
+| `X-Opulentus-Event` | the event name |
+| `X-Opulentus-Timestamp` | unix seconds, and part of what is signed |
+| `X-Opulentus-Signature` | `sha256=` followed by the hex HMAC |
+| `X-Opulentus-Delivery` | the delivery's id — **keep it and ignore repeats** |
 
 The signature is `HMAC-SHA256(secret, f"{timestamp}.{raw_body}")`, hex. Two things about
 that string matter and both are deliberate:
@@ -816,7 +814,7 @@ import hashlib, hmac, time
 
 
 def verify(secret: str, headers, raw_body: bytes, tolerance: int = 300) -> bool:
-    timestamp = int(headers["X-Tel-Agent-Timestamp"])
+    timestamp = int(headers["X-Opulentus-Timestamp"])
     if abs(time.time() - timestamp) > tolerance:
         return False
     expected = (
@@ -826,11 +824,11 @@ def verify(secret: str, headers, raw_body: bytes, tolerance: int = 300) -> bool:
         ).hexdigest()
     )
     # Constant time: a plain `==` leaks how much of the signature was right.
-    return hmac.compare_digest(expected, headers["X-Tel-Agent-Signature"])
+    return hmac.compare_digest(expected, headers["X-Opulentus-Signature"])
 ```
 
 **Delivery is at least once.** A receiver that is briefly unreachable is retried with
-backoff, so the same event can arrive twice — act on `X-Tel-Agent-Delivery` once and
+backoff, so the same event can arrive twice — act on `X-Opulentus-Delivery` once and
 ignore a repeat. **Redirects are not followed**: a signed POST that follows one delivers
 the signature somewhere the operator never registered.
 
@@ -882,14 +880,14 @@ dead one, because the user only finds out after losing ten calls.
 ## B9.1 Outbound abuse prevention
 
 **This applies to every installation, not just the hosted edition.** Anyone running
-Tel-Agent pays for the calls it makes.
+Opulentus pays for the calls it makes.
 
 **Toll fraud / IRSF** is the attack: someone reaches an outbound path and makes the
 system call premium-rate numbers they control. The operator pays for every minute, and
 those minutes are expensive by design. There is no single fix — the defences below are
 layered, and the outer ones must hold even when the inner ones have a bug.
 
-Tel-Agent exposes **three** paths that can start a real call, and all three need the
+Opulentus exposes **three** paths that can start a real call, and all three need the
 same treatment:
 
 | Path | Control |
@@ -912,7 +910,7 @@ An outbound call is permitted only if the destination is:
 and its country is on the allowed-countries list.
 ```
 
-This costs almost nothing in practice, because Tel-Agent's real outbound use is calling
+This costs almost nothing in practice, because Opulentus's real outbound use is calling
 someone back or dialling a known contact. It removes most of the attack surface.
 
 **Always refused, regardless of other rules:** `+882` and `+883` (international
@@ -1043,17 +1041,12 @@ cheaply.
 
 - **AGPL-3.0.** Anyone running it as a network service must publish their modifications.
   This is what makes a future commercial license sellable.
-- **CLA required from the first contributor.** A simple agreement, signed electronically
-  via a GitHub bot, granting relicensing rights. **Add it before the first PR** — after
-  that it becomes practically impossible, and without it the commercial license option
-  is gone forever.
-- **Copyright held by Dpro GmbH.** Any code shared with other projects needs a written
-  license arrangement between the entities — cheap now, expensive later.
+- **Made by Opulentus, built by Adeeb.**
 - Three revenue paths, one codebase: **hosted edition** · **commercial license for
   closed-source integration** · **support**. The free version is never crippled; it is
   the product.
 
-*Not legal advice — confirm the trademark position on "Tel-Agent" (EUIPO classes 9 and
+*Not legal advice — confirm the trademark position on "Opulentus" (EUIPO classes 9 and
 42) before committing to a logo. An older academic dialogue-systems framework shares
 the name.*
 
@@ -1122,12 +1115,12 @@ yet verified with a live account**, on the card, until a real message has gone t
 ### The customer connects their own app
 
 Every channel stores per-tenant credentials that the customer creates in **their own**
-developer account. Tel-Agent never holds a shared platform application.
+developer account. Opulentus never holds a shared platform application.
 
 This is the same reasoning as §B3.1 for phone numbers, and it is not only about
 philosophy: one shared app puts every installation behind one rate limit, and makes a
-single policy violation everybody's outage. It is also what keeps Tel-Agent installable
-by a stranger from GitHub with no account at Dpro.
+single policy violation everybody's outage. It is also what keeps Opulentus installable
+by a stranger from GitHub with no account at Opulentus.
 
 Token handling follows §B9 exactly — encrypted at rest, excluded from every API
 response, and surfaced to the UI only as a masked preview showing the last four
@@ -1193,7 +1186,7 @@ and unlike a webhook there is no provider signature to check.
 One script tag, from the settings screen:
 
 ```html
-<script src="https://telagent.example/embed.js" data-tel-agent="c7f2…"></script>
+<script src="https://opulentus.example/embed.js" data-opulentus="c7f2…"></script>
 ```
 
 The script's only job is to create an **iframe** pointing at the widget, and to size and
@@ -1203,7 +1196,7 @@ The iframe is the point, not an implementation detail. It isolates in both direc
 
 - **Their page cannot read the conversation.** A visitor typing a medical complaint into
   a chat bubble is not typing it into the site's analytics.
-- **Our widget cannot read their page.** Nothing in Tel-Agent can reach the host page's
+- **Our widget cannot read their page.** Nothing in Opulentus can reach the host page's
   DOM, its cookies, or a half-filled checkout form — so an installation cannot become a
   liability for the site that installed it.
 - **Their CSS cannot break it, and ours cannot break theirs.** A script-injected div
@@ -1217,12 +1210,12 @@ three.
 the chat, so pinning its hash guards against nothing a compromise of that installation
 would not already own. It also cannot be pinned: the file changes with every upgrade, and
 a stale `integrity` would silently stop every customer's widget on the day they update.
-Tel-Agent Cloud is the case where the script does cross an origin, and there it is served
+Opulentus Cloud is the case where the script does cross an origin, and there it is served
 from a versioned URL so the hash and the file change together.
 
 ### The identifier in the tag
 
-`data-tel-agent` is the channel's `webhook_path` (§B5) — long, random, and unique across
+`data-opulentus` is the channel's `webhook_path` (§B5) — long, random, and unique across
 the installation. It is not the workspace id, and not a guessable slug.
 
 It is not a secret: it travels in the HTML of a public page and anybody can read it. It
@@ -1236,7 +1229,7 @@ This paragraph replaces an earlier one that had it wrong, and the mistake is wor
 keeping because it is easy to make twice.
 
 The widget runs in an iframe **served by this installation**. When it posts a message
-the browser stamps the request with the *iframe's* origin - `https://telagent.example` -
+the browser stamps the request with the *iframe's* origin - `https://opulentus.example` -
 and never with the site the iframe is embedded in. An allowlist of customer sites
 compared against that header therefore matches nothing, on every page including the
 allowed ones. The check reads like a guard and refuses everybody.
@@ -1253,7 +1246,7 @@ So the list does two jobs, and this is the important half:
   renders `'none'`, and so does an unknown or switched-off address.
 - **On the message, as an `Origin` check** that also accepts the installation's own
   origin. Accepting it gives a browser nothing: a page on `evil.test` cannot send
-  `Origin: https://telagent.example`, because the browser writes that header and scripts
+  `Origin: https://opulentus.example`, because the browser writes that header and scripts
   cannot. A client that is not a browser can send anything, and the guards for that are
   the rate limit and the captcha - which an origin check was never going to be.
 
@@ -1342,7 +1335,7 @@ be safe to show a stranger**. That is the sentence to re-read before adding a fi
 - Distribution matters as much as code: a strong README, a 30-second video of a real
   call, and launches on Hacker News and r/selfhosted. An excellent project nobody finds
   is a dead project.
-- An **n8n community node** for Tel-Agent is one of the strongest distribution channels
+- An **n8n community node** for Opulentus is one of the strongest distribution channels
   available — a large community actively looking for new nodes.
 - Everything discussed but not in this document belongs in `IDEAS.md`. It will still be
   there when it's needed, and it won't distract now.

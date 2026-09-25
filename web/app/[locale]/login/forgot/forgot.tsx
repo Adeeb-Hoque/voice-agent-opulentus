@@ -28,7 +28,7 @@ import { INSTALLATION } from "../installation";
 import type { ForgotDictionary } from "./page";
 
 /** The command an administrator runs on the machine itself. Not copy: it is typed verbatim. */
-const RESET_COMMAND = "tel-agent admin reset-password";
+const RESET_COMMAND = "opulentus admin reset-password";
 
 /**
  * Step one of three: ask for the account, get a code.

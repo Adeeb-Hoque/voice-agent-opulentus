@@ -321,7 +321,7 @@ async def stage_restore(
     )
     return RestoreStaged(
         staged=True,
-        detail="Restart Tel-Agent to carry out the restore. Nothing has changed yet.",
+        detail="Restart Opulentus to carry out the restore. Nothing has changed yet.",
         warnings=warnings,
     )
 

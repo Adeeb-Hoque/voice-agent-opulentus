@@ -193,8 +193,8 @@ async def send_test_mail(
         mail.send,
         config,
         to=user.email,
-        subject="Tel-Agent test message",
-        body="This is a test message from your Tel-Agent installation. "
+        subject="Opulentus test message",
+        body="This is a test message from your Opulentus installation. "
         "If it reached you, outgoing mail is working.",
     )
     if not sent:

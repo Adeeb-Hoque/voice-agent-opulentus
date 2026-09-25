@@ -1,7 +1,7 @@
 """services
 
 The catalogue's first table - §A6.11's Services tab, and the only prices the assistant
-is ever allowed to quote. Tel-Agent ships with none of it: an agent that invents a
+is ever allowed to quote. Opulentus ships with none of it: an agent that invents a
 price is worse than one that says it does not know.
 
 Three columns carry a decision rather than a value:
