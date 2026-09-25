@@ -39,10 +39,10 @@ specification, and anything that helps Milestone 0 work.
 
 Work comes from the public board and nowhere else:
 
-**https://github.com/Adeeb-Hoque/opulentus/projects**
+**https://github.com/Adeeb-Hoque/voice-agent-opulentus/projects**
 
 ```bash
-gh issue list --repo Adeeb-Hoque/opulentus --label "good first issue" --state open
+gh issue list --repo Adeeb-Hoque/voice-agent-opulentus --label "good first issue" --state open
 ```
 
 **Take from the `Ready` column only.** `Backlog` means the issue is blocked on another
@@ -92,7 +92,7 @@ translated into `en`, `de` and `ar`. Translations are very welcome.
 ## Development setup
 
 ```bash
-git clone https://github.com/Adeeb-Hoque/opulentus.git
+git clone https://github.com/Adeeb-Hoque/voice-agent-opulentus.git
 cd Opulentus
 cp .env.example .env    # fill in your own keys
 ```

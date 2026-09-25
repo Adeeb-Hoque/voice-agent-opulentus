@@ -104,11 +104,11 @@ Work comes from the public board and nowhere else. Do not invent a task, and do 
 "just fix something you noticed while you were in there" — that goes in a new issue.
 
 ```bash
-gh issue list --repo Adeeb-Hoque/opulentus --label "good first issue" --state open
-gh issue list --repo Adeeb-Hoque/opulentus --label "help wanted" --state open
+gh issue list --repo Adeeb-Hoque/voice-agent-opulentus --label "good first issue" --state open
+gh issue list --repo Adeeb-Hoque/voice-agent-opulentus --label "help wanted" --state open
 ```
 
-The board is at https://github.com/Adeeb-Hoque/opulentus/projects
+The board is at https://github.com/Adeeb-Hoque/voice-agent-opulentus/projects
 
 **Only take from the `Ready` column.** `Backlog` means blocked on something else; the
 issue looks available and is not. Every issue carries a `level:` label:
@@ -133,7 +133,7 @@ go back to step 1.
 ## Step 2 — Claim it
 
 ```bash
-gh issue comment <number> --repo Adeeb-Hoque/opulentus --body "I would like to take this."
+gh issue comment <number> --repo Adeeb-Hoque/voice-agent-opulentus --body "I would like to take this."
 ```
 
 **Wait to be assigned before writing code.** One person per issue, and the assignment is
@@ -195,7 +195,7 @@ Everyone contributes through a fork. Nobody gets write access to the repository,
 that is the same rule for everyone.
 
 ```bash
-gh repo fork Adeeb-Hoque/opulentus --clone
+gh repo fork Adeeb-Hoque/voice-agent-opulentus --clone
 cd Opulentus
 git remote -v          # expect: origin = your fork, upstream = Adeeb-Hoque
 ```
@@ -203,7 +203,7 @@ git remote -v          # expect: origin = your fork, upstream = Adeeb-Hoque
 `gh repo fork --clone` sets `upstream` for you. If `git remote -v` does not show it:
 
 ```bash
-git remote add upstream https://github.com/Adeeb-Hoque/opulentus.git
+git remote add upstream https://github.com/Adeeb-Hoque/voice-agent-opulentus.git
 ```
 
 ### 3.4 — Check the email on your commits
@@ -310,7 +310,7 @@ is useful; a silent one wastes a review cycle.
 
 ```bash
 git push -u origin <branch>
-gh pr create --repo Adeeb-Hoque/opulentus --title "<same as the commit>" --body "..."
+gh pr create --repo Adeeb-Hoque/voice-agent-opulentus --title "<same as the commit>" --body "..."
 ```
 
 The body says: what you did, what you deliberately did not do, and how you tested it.
@@ -335,7 +335,7 @@ contribution: it returns the task to the pool the same day instead of fourteen d
 later, which is when an inactive assignment is cleared automatically.
 
 ```bash
-gh issue comment <number> --repo Adeeb-Hoque/opulentus --body "I cannot finish this - unassigning so somebody else can take it."
+gh issue comment <number> --repo Adeeb-Hoque/voice-agent-opulentus --body "I cannot finish this - unassigning so somebody else can take it."
 ```
 
 ## What "done" means

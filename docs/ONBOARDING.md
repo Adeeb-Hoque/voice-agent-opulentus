@@ -59,15 +59,15 @@ else can actually review.
 ## Do exactly this
 
 **First, say which file you are taking.** Every language has an open issue —
-[search the `i18n` label](https://github.com/Adeeb-Hoque/opulentus/issues?q=is%3Aissue+is%3Aopen+label%3Ai18n)
+[search the `i18n` label](https://github.com/Adeeb-Hoque/voice-agent-opulentus/issues?q=is%3Aissue+is%3Aopen+label%3Ai18n)
 for yours, and use
-[#29](https://github.com/Adeeb-Hoque/opulentus/issues/29) if it is not there yet. Leave a
+[#29](https://github.com/Adeeb-Hoque/voice-agent-opulentus/issues/29) if it is not there yet. Leave a
 comment naming the file. Nothing gets assigned and you do not wait for an answer —
 several people work on one language at the same time, each on a different file, and the
 comment is what stops two of you translating the same one.
 
 ```bash
-# 1. Fork github.com/Adeeb-Hoque/opulentus on GitHub, then clone YOUR fork
+# 1. Fork github.com/Adeeb-Hoque/voice-agent-opulentus on GitHub, then clone YOUR fork
 git clone https://github.com/<your-username>/Opulentus.git
 cd Opulentus
 
@@ -141,7 +141,7 @@ If that does not happen, say so — being ignored is the project's failure, not 
 
 Once it merges, everything on the board is open to you:
 
-- The board: <https://github.com/Adeeb-Hoque/opulentus/projects> — take from the `Ready`
+- The board: <https://github.com/Adeeb-Hoque/voice-agent-opulentus/projects> — take from the `Ready`
   column, and look for `level: first-issue`
 - [`CONTRIBUTING.md`](../CONTRIBUTING.md) — the full workflow, the scope rules, and what
   the project is not accepting yet

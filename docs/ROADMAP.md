@@ -3,7 +3,7 @@
 Twelve milestones. **Step N+1 does not start before step N works.**
 
 This is the public, milestone-level view. Day-to-day tasks live in
-[GitHub Issues](https://github.com/Adeeb-Hoque/opulentus/issues); ideas that are not in v1
+[GitHub Issues](https://github.com/Adeeb-Hoque/voice-agent-opulentus/issues); ideas that are not in v1
 live in [`IDEAS.md`](../IDEAS.md).
 
 ---
@@ -23,7 +23,7 @@ Instagram, Discord, Slack, email and SMS.
 What is being built now is the second wave of channels decided in D-044 - Microsoft
 Teams, Signal, Viber, Google Chat, Mattermost, Matrix, IRC, LINE, WeChat Official
 Account, WeCom, QQ Bot, DingTalk, Feishu/Lark and iMessage - one issue each under the
-[`channel` label](https://github.com/Adeeb-Hoque/opulentus/issues?q=is%3Aissue%20state%3Aopen%20label%3Achannel),
+[`channel` label](https://github.com/Adeeb-Hoque/voice-agent-opulentus/issues?q=is%3Aissue%20state%3Aopen%20label%3Achannel),
 on the declarative setup contract of #220.
 
 The rule below still holds for what comes after: routing rules, tools, webhooks, the MCP

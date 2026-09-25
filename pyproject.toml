@@ -80,8 +80,8 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/Adeeb-Hoque/opulentus"
-Source = "https://github.com/Adeeb-Hoque/opulentus"
+Homepage = "https://github.com/Adeeb-Hoque/voice-agent-opulentus"
+Source = "https://github.com/Adeeb-Hoque/voice-agent-opulentus"
 
 [build-system]
 requires = ["setuptools>=68"]

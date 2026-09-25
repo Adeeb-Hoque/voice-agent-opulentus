@@ -47,4 +47,4 @@ exclude-labels: ["skip-changelog"]
 template: |
   $CHANGES
 
-  **Full changelog**: https://github.com/Adeeb-Hoque/opulentus/compare/$PREVIOUS_TAG...v$RESOLVED_VERSION
+  **Full changelog**: https://github.com/Adeeb-Hoque/voice-agent-opulentus/compare/$PREVIOUS_TAG...v$RESOLVED_VERSION

@@ -2,7 +2,7 @@ $ErrorActionPreference = "Stop"
 
 $app = $PSScriptRoot
 $current = [Version](Get-Content (Join-Path $app "version.txt") -Raw).ToString()
-$release = Invoke-RestMethod -Headers @{ "User-Agent" = "Opulentus updater" } -Uri "https://api.github.com/repos/Adeeb-Hoque/opulentus/releases/latest"
+$release = Invoke-RestMethod -Headers @{ "User-Agent" = "Opulentus updater" } -Uri "https://api.github.com/repos/Adeeb-Hoque/voice-agent-opulentus/releases/latest"
 $candidate = [Version]($release.tag_name.TrimStart("v"))
 if ($candidate -le [Version]$current) { exit 0 }
 

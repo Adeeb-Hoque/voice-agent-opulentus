@@ -7,14 +7,14 @@ body:
       value: |
         Opulentus is at **Milestone 0** — web chat answered end to end, streaming,
         cancellable. The phone is Milestone 11. Work outside that order is parked
-        in [IDEAS.md](https://github.com/Adeeb-Hoque/opulentus/blob/main/IDEAS.md)
+        in [IDEAS.md](https://github.com/Adeeb-Hoque/voice-agent-opulentus/blob/main/IDEAS.md)
         rather than built.
 
         Use this form to describe the idea clearly. If it is beyond the current
         milestone, expect it to be recorded in `IDEAS.md` instead of scheduled.
 
         **Never include an API key, a SIP password, a real recording, or a real
-        transcript.** Security problem? See [SECURITY.md](https://github.com/Adeeb-Hoque/opulentus/blob/main/SECURITY.md).
+        transcript.** Security problem? See [SECURITY.md](https://github.com/Adeeb-Hoque/voice-agent-opulentus/blob/main/SECURITY.md).
 
   - type: textarea
     id: problem

@@ -14,7 +14,7 @@ description: |
   Ships its own Python and Node runtimes; everything runs locally under
   /opt/opulentus with data in /var/lib/opulentus.
 vendor: Opulentus
-homepage: https://github.com/Adeeb-Hoque/opulentus
+homepage: https://github.com/Adeeb-Hoque/voice-agent-opulentus
 license: AGPL-3.0
 
 contents:

@@ -121,8 +121,8 @@ models, and decide which callers ever reach the AI at all.
 
 ## Project status
 
-**Alpha. Native installers and container images are available today.** Choose a platform on the [download page](https://github.com/Adeeb-Hoque/opulentus/download), or get the packages from the
-[releases page](https://github.com/Adeeb-Hoque/opulentus/releases/latest): a Windows
+**Alpha. Native installers and container images are available today.** Choose a platform on the [download page](https://github.com/Adeeb-Hoque/voice-agent-opulentus/download), or get the packages from the
+[releases page](https://github.com/Adeeb-Hoque/voice-agent-opulentus/releases/latest): a Windows
 installer, macOS packages for Apple Silicon and Intel, DEB and RPM packages for Linux,
 and a `docker-compose.release.yml` that pulls the published images. The installers are
 unsigned while code signing is not yet configured, so the operating system will ask
@@ -138,12 +138,12 @@ routing rules, backups, system health, settings and workspaces. The product spea
 five languages: English, German, Arabic, Spanish and Dutch.
 
 **What is being added now.** A second wave of channels, one issue each under the
-[`channel` label](https://github.com/Adeeb-Hoque/opulentus/issues?q=is%3Aissue%20state%3Aopen%20label%3Achannel):
+[`channel` label](https://github.com/Adeeb-Hoque/voice-agent-opulentus/issues?q=is%3Aissue%20state%3Aopen%20label%3Achannel):
 Microsoft Teams, Signal, Viber, Google Chat, Mattermost, Matrix, IRC, LINE, WeChat,
 WeCom, QQ, DingTalk, Feishu / Lark and iMessage. They share one declarative setup
 contract (#220), so each new channel is a definition plus a transport rather than a
 fork of the last one. More translations are open as
-[good first issues](https://github.com/Adeeb-Hoque/opulentus/issues?q=is%3Aissue%20state%3Aopen%20label%3Ai18n).
+[good first issues](https://github.com/Adeeb-Hoque/voice-agent-opulentus/issues?q=is%3Aissue%20state%3Aopen%20label%3Ai18n).
 
 **Deployment.** The Windows installer starts the local service and opens the dashboard in your browser. Native macOS and Linux packages and Docker images provide the other installation paths. Phone and messaging connections use your own provider credentials; configure the channels you want to use in your installation.
 
@@ -177,7 +177,7 @@ generated.
 ## Quick start
 
 ```bash
-git clone https://github.com/Adeeb-Hoque/opulentus.git
+git clone https://github.com/Adeeb-Hoque/voice-agent-opulentus.git
 cd Opulentus
 cp .env.example .env
 # set ENCRYPTION_KEY in .env - generate one with: openssl rand -hex 32
@@ -193,7 +193,7 @@ Every tagged release also publishes the images to GitHub Container Registry, so
 the build step can be skipped entirely:
 `docker compose -f docker-compose.release.yml up -d` — same layout, same
 volumes, interchangeable with the from-source file on one machine. If you would
-rather not run Docker at all, the [releases page](https://github.com/Adeeb-Hoque/opulentus/releases/latest)
+rather not run Docker at all, the [releases page](https://github.com/Adeeb-Hoque/voice-agent-opulentus/releases/latest)
 has native installers for Windows, macOS and Linux.
 
 Both ports are published on **loopback only**. Reaching the installation from

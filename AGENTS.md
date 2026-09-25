@@ -104,7 +104,7 @@ each other. The branches and pull requests on GitHub are the only shared state, 
 2. **Say who you are.** The first line of every PR description is
    `Agent: claude-code` / `Agent: codex` / `Agent: antigravity` / `Agent: human`.
 3. **Check for an open PR on the same files before you start.**
-   `gh pr list --repo Adeeb-Hoque/opulentus --json number,title,headRefName,files`
+   `gh pr list --repo Adeeb-Hoque/voice-agent-opulentus --json number,title,headRefName,files`
    If one exists, do not open a second — comment on it or ask the maintainer.
 4. **Never review your own PR.** Ask another agent, or the maintainer, for the review.
 5. **The maintainer merges.** Do not merge, do not force-push, do not delete branches
